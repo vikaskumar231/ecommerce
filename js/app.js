@@ -46,12 +46,14 @@ const App = {
   init() {
     this.bindEvents();
     this.updateCounters();
+    this.updateHeaderUserChip();
     this.routeFromUrl();
     this.renderView();
     
     // Listen to store updates
     window.addEventListener("aura_store_updated", (e) => {
       this.updateCounters();
+      this.updateHeaderUserChip();
       if (this.currentView === "admin") {
         this.renderAdminView();
       }
@@ -230,6 +232,22 @@ const App = {
 
     if (cartCounterEl) cartCounterEl.textContent = cartCount;
     if (wishlistCounterEl) wishlistCounterEl.textContent = wishlistCount;
+  },
+
+  updateHeaderUserChip() {
+    const user = store.getCurrentUser();
+    const avatarEl = document.getElementById("headerUserAvatar");
+    const labelEl = document.getElementById("headerUserLabel");
+    if (user) {
+      if (avatarEl) {
+        avatarEl.textContent = user.avatar || (user.username ? user.username.charAt(0).toUpperCase() : "U");
+        avatarEl.style.fontSize = "0.85rem";
+      }
+      if (labelEl) labelEl.textContent = user.name ? user.name.split(" ")[0] : user.username;
+    } else {
+      if (avatarEl) { avatarEl.textContent = "👤"; avatarEl.style.fontSize = "1rem"; }
+      if (labelEl) labelEl.textContent = "Login";
+    }
   },
 
   showToast(message, type = "success") {
@@ -1172,13 +1190,44 @@ const App = {
   // VIEW: ORDER TRACKING
   // =========================================================================
   renderTrackingView() {
+    const user = store.getCurrentUser();
     const searchInput = document.getElementById("trackingSearchInput");
+    const quickLinksWrap = document.getElementById("trackingQuickLinksWrap");
+
+    // Populate quick links with user's own orders
+    if (quickLinksWrap) {
+      if (user) {
+        const myOrders = store.getOrdersForCurrentUser();
+        if (myOrders.length > 0) {
+          quickLinksWrap.innerHTML = `
+            <span style="font-weight:600; color:var(--color-primary-dark);">My Orders:</span>
+            ${myOrders.map(o => `
+              <button class="btn btn-secondary btn-sm" onclick="App.displayOrderTrackingDetails('${o.orderId}')">
+                ${o.orderId} (${o.orderStatus})
+              </button>
+            `).join("")}
+          `;
+        } else {
+          quickLinksWrap.innerHTML = `<span>No orders yet — browse our catalog to place your first order!</span>`;
+        }
+      } else {
+        quickLinksWrap.innerHTML = `<span><button class="btn btn-secondary btn-sm" onclick="App.openLoginModal()">Sign in to see your orders</button></span>`;
+      }
+    }
+
     if (this.activeTrackingOrderId && searchInput) {
       searchInput.value = this.activeTrackingOrderId;
     }
 
-    const orderIdToSearch = this.activeTrackingOrderId || (searchInput ? searchInput.value.trim() : "") || "ORD-RESIN-98421";
-    this.displayOrderTrackingDetails(orderIdToSearch);
+    const orderIdToSearch = this.activeTrackingOrderId || (searchInput ? searchInput.value.trim() : "");
+    if (orderIdToSearch) {
+      this.displayOrderTrackingDetails(orderIdToSearch);
+    } else if (user) {
+      const myOrders = store.getOrdersForCurrentUser();
+      if (myOrders.length > 0) {
+        this.displayOrderTrackingDetails(myOrders[0].orderId);
+      }
+    }
   },
 
   searchOrderTracking() {
@@ -1276,11 +1325,42 @@ const App = {
   // VIEW: USER ACCOUNT
   // =========================================================================
   renderAccountView() {
-    const user = store.getUser() || { name: "Guest User", email: "guest@example.com" };
+    const user = store.getCurrentUser();
+    if (!user) {
+      // Not logged in: show login prompt inside account view
+      const nameEl = document.getElementById("accountUserName");
+      const emailEl = document.getElementById("accountUserEmail");
+      const avatarEl = document.getElementById("accountAvatarLetter");
+      const joinedEl = document.getElementById("accountJoinedDate");
+      if (nameEl) nameEl.textContent = "Guest User";
+      if (emailEl) emailEl.textContent = "Please sign in";
+      if (avatarEl) avatarEl.textContent = "👤";
+      if (joinedEl) joinedEl.textContent = "";
+
+      const contentBox = document.getElementById("accountContentArea");
+      if (contentBox) {
+        contentBox.innerHTML = `
+          <div style="text-align:center; padding:4rem 1rem;">
+            <div style="font-size:4rem; margin-bottom:1rem;">🔐</div>
+            <h3 style="font-size:1.5rem; color:var(--color-primary-dark); margin-bottom:0.5rem;">Please Sign In</h3>
+            <p style="color:var(--color-text-muted); margin-bottom:1.5rem;">You need to be logged in to view your orders and wishlist.</p>
+            <button class="btn btn-primary btn-lg" onclick="App.openLoginModal()">
+              Sign In to My Account
+            </button>
+          </div>
+        `;
+      }
+      return;
+    }
+
     const nameEl = document.getElementById("accountUserName");
     const emailEl = document.getElementById("accountUserEmail");
-    if (nameEl) nameEl.textContent = user.name;
-    if (emailEl) emailEl.textContent = user.email;
+    const avatarEl = document.getElementById("accountAvatarLetter");
+    const joinedEl = document.getElementById("accountJoinedDate");
+    if (nameEl) nameEl.textContent = user.name || user.username;
+    if (emailEl) emailEl.textContent = user.email || "";
+    if (avatarEl) avatarEl.textContent = user.avatar || user.username.charAt(0).toUpperCase();
+    if (joinedEl) joinedEl.textContent = user.joinedDate ? `Member since ${user.joinedDate}` : "";
 
     this.renderAccountTab("orders");
   },
@@ -1293,12 +1373,26 @@ const App = {
     const contentBox = document.getElementById("accountContentArea");
     if (!contentBox) return;
 
+    const user = store.getCurrentUser();
+    if (!user) {
+      contentBox.innerHTML = `<div style="text-align:center; padding:3rem 1rem;"><p>Please <button class="btn btn-primary btn-sm" onclick="App.openLoginModal()">Sign In</button> to see your data.</p></div>`;
+      return;
+    }
+
     if (tabName === "orders") {
-      const orders = store.getOrders();
+      const orders = store.getOrdersForCurrentUser();
       contentBox.innerHTML = `
-        <h3 style="font-size:1.35rem; color:var(--color-primary-dark); margin-bottom:1.5rem;">My Handcrafted Orders (${orders.length})</h3>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap; gap:0.5rem;">
+          <h3 style="font-size:1.35rem; color:var(--color-primary-dark);">My Handcrafted Orders (${orders.length})</h3>
+        </div>
         <div style="display:flex; flex-direction:column; gap:1.25rem;">
-          ${orders.map(order => `
+          ${orders.length === 0 ? `
+            <div style="text-align:center; padding:3rem 1rem; background:#ffffff; border-radius:var(--radius-md); border:1px solid var(--color-border);">
+              <div style="font-size:3rem; margin-bottom:1rem;">📦</div>
+              <p style="color:var(--color-text-muted);">No orders yet! Browse our collection to place your first custom resin order.</p>
+              <button class="btn btn-primary" style="margin-top:1rem;" onclick="App.navigateTo('catalog')">Shop Now</button>
+            </div>
+          ` : orders.map(order => `
             <div style="border:1px solid var(--color-border); border-radius:var(--radius-md); padding:1.5rem; background:#ffffff;">
               <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem; border-bottom:1px solid var(--color-border-subtle); padding-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
                 <div>
@@ -1306,7 +1400,7 @@ const App = {
                   <div style="font-size:0.8rem; color:var(--color-text-muted);">Placed on ${new Date(order.placedAt).toLocaleDateString("en-IN", { day:'numeric', month:'short', year:'numeric' })}</div>
                 </div>
                 <div style="text-align:right;">
-                  <span class="status-pill status-${order.orderStatus.toLowerCase()}">${order.orderStatus}</span>
+                  <span class="status-pill status-${order.orderStatus.toLowerCase().replace(/ /g,'-')}">${order.orderStatus}</span>
                   <div style="font-weight:800; color:var(--color-primary); font-size:1.15rem; margin-top:0.25rem;">₹${order.total.toLocaleString("en-IN")}</div>
                 </div>
               </div>
@@ -1315,7 +1409,7 @@ const App = {
                   <div style="display:flex; align-items:center; gap:0.75rem; font-size:0.875rem;">
                     <img src="${i.image}" style="width:36px; height:36px; border-radius:4px; object-fit:cover;" />
                     <span style="font-weight:600;">${i.name} (x${i.quantity})</span>
-                    ${i.customOptions?.customText ? `<span style="color:var(--color-gold-dark); font-size:0.75rem;">[Custom: ${i.customOptions.customText}]</span>` : ''}
+                    ${i.customOptions?.customText ? `<span style="color:var(--color-gold-dark); font-size:0.75rem;">[Custom: ${i.customOptions.customText}]</span>` : (i.selectedOptions?.customText ? `<span style="color:var(--color-gold-dark); font-size:0.75rem;">[Custom: ${i.selectedOptions.customText}]</span>` : '')}
                   </div>
                 `).join("")}
               </div>
@@ -1348,34 +1442,101 @@ const App = {
         `}
       `;
     } else if (tabName === "bespoke") {
-      const requests = store.getCustomRequests();
+      const requests = store.getCustomRequestsForCurrentUser();
       contentBox.innerHTML = `
         <h3 style="font-size:1.35rem; color:var(--color-primary-dark); margin-bottom:1.5rem;">My Bespoke Custom Inquiries (${requests.length})</h3>
-        <div style="display:flex; flex-direction:column; gap:1.25rem;">
-          ${requests.map(req => `
-            <div style="border:1px solid var(--color-border); border-radius:var(--radius-md); padding:1.5rem; background:#ffffff;">
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
-                <div style="font-weight:700; color:var(--color-primary-dark); font-size:1.05rem;">${req.productType}</div>
-                <span class="status-pill status-curing">${req.status}</span>
+        ${requests.length === 0 ? `
+          <div style="text-align:center; padding:3rem 1rem;">
+            <div style="font-size:3rem; margin-bottom:1rem;">🎨</div>
+            <p style="color:var(--color-text-muted);">No bespoke requests yet. Use the Custom Studio to create a unique piece!</p>
+            <button class="btn btn-primary" style="margin-top:1rem;" onclick="App.navigateTo('bespoke')">Open Custom Studio</button>
+          </div>
+        ` : `
+          <div style="display:flex; flex-direction:column; gap:1.25rem;">
+            ${requests.map(req => `
+              <div style="border:1px solid var(--color-border); border-radius:var(--radius-md); padding:1.5rem; background:#ffffff;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+                  <div style="font-weight:700; color:var(--color-primary-dark); font-size:1.05rem;">${req.productType}</div>
+                  <span class="status-pill status-curing">${req.status}</span>
+                </div>
+                <div style="font-size:0.85rem; color:var(--color-text-muted); line-height:1.6; margin-bottom:1rem;">
+                  ${req.dimensions ? `<div><strong>Dimensions:</strong> ${req.dimensions}</div>` : ''}
+                  ${req.colorPalette ? `<div><strong>Pigment Palette:</strong> ${req.colorPalette}</div>` : ''}
+                  ${req.inclusions ? `<div><strong>Inclusions:</strong> ${req.inclusions}</div>` : ''}
+                  ${req.customText ? `<div><strong>Text:</strong> "${req.customText}"</div>` : ''}
+                  ${req.notes ? `<div><strong>Notes:</strong> ${req.notes}</div>` : ''}
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span style="font-weight:700; color:var(--color-primary);">Budget: ${req.estimatedBudget || 'TBD'}</span>
+                  <button class="btn btn-whatsapp btn-sm" onclick="window.open('https://wa.me/919876543210?text=Hi%20Artisan,%20following%20up%20on%20my%20inquiry%20${req.id}', '_blank')">
+                    Follow Up on WhatsApp
+                  </button>
+                </div>
               </div>
-              <div style="font-size:0.85rem; color:var(--color-text-muted); line-height:1.6; margin-bottom:1rem;">
-                <div><strong>Dimensions:</strong> ${req.dimensions}</div>
-                <div><strong>Pigment Palette:</strong> ${req.colorPalette}</div>
-                <div><strong>Inclusions:</strong> ${req.inclusions}</div>
-                ${req.customText ? `<div><strong>Text:</strong> "${req.customText}"</div>` : ''}
-                ${req.notes ? `<div><strong>Notes:</strong> ${req.notes}</div>` : ''}
-              </div>
-              <div style="display:flex; justify-content:space-between; align-items:center;">
-                <span style="font-weight:700; color:var(--color-primary);">Budget: ${req.estimatedBudget}</span>
-                <button class="btn btn-whatsapp btn-sm" onclick="window.open('https://wa.me/919876543210?text=Hi%20Artisan,%20following%20up%20on%20my%20inquiry%20${req.id}', '_blank')">
-                  Follow Up on WhatsApp
-                </button>
-              </div>
+            `).join("")}
+          </div>
+        `}
+      `;
+    } else if (tabName === "profile") {
+      contentBox.innerHTML = `
+        <h3 style="font-size:1.35rem; color:var(--color-primary-dark); margin-bottom:1.5rem;">My Profile & Delivery Address</h3>
+        <div style="background:#ffffff; border:1px solid var(--color-border); border-radius:var(--radius-md); padding:1.75rem;">
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" id="profileName" class="form-control" value="${user.name || ''}" />
             </div>
-          `).join("")}
+            <div class="form-group">
+              <label class="form-label">Username</label>
+              <input type="text" class="form-control" value="${user.username}" disabled style="opacity:0.6;" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" id="profileEmail" class="form-control" value="${user.email || ''}" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Mobile Number</label>
+            <input type="tel" id="profilePhone" class="form-control" value="${user.phone || ''}" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Delivery Address</label>
+            <input type="text" id="profileAddress" class="form-control" value="${user.address || ''}" />
+          </div>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">City</label>
+              <input type="text" id="profileCity" class="form-control" value="${user.city || ''}" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">State</label>
+              <input type="text" id="profileState" class="form-control" value="${user.state || ''}" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">PIN Code</label>
+            <input type="text" id="profilePincode" class="form-control" value="${user.pincode || ''}" style="max-width:180px;" />
+          </div>
+          <div style="margin-top:1.5rem;">
+            <button class="btn btn-primary" onclick="App.saveProfileDetails()">💾 Save Profile</button>
+          </div>
         </div>
       `;
     }
+  },
+
+  saveProfileDetails() {
+    const name = document.getElementById("profileName")?.value.trim();
+    const email = document.getElementById("profileEmail")?.value.trim();
+    const phone = document.getElementById("profilePhone")?.value.trim();
+    const address = document.getElementById("profileAddress")?.value.trim();
+    const city = document.getElementById("profileCity")?.value.trim();
+    const state = document.getElementById("profileState")?.value.trim();
+    const pincode = document.getElementById("profilePincode")?.value.trim();
+
+    store.updateUser({ name, email, phone, address, city, state, pincode });
+    this.showToast("✅ Profile updated successfully!");
+    this.renderAccountView();
   },
 
   // =========================================================================
@@ -1835,6 +1996,161 @@ const App = {
     if (!product) return;
     const msg = `*Hi Art आलय (Art Alay) Studio!* 🎨\nI want to order: *${product.name}* (Price: ₹${product.price}).\nPlease guide me on customizations & shipping.`;
     window.open(`https://wa.me/919876543210?text=${encodeURIComponent(msg)}`, "_blank");
+  },
+
+  // =========================================================================
+  // LOGIN MODAL METHODS
+  // =========================================================================
+  openLoginModal() {
+    const overlay = document.getElementById("loginModalOverlay");
+    if (overlay) {
+      overlay.classList.add("active");
+      // Reset fields
+      const unEl = document.getElementById("loginUsername");
+      const pwEl = document.getElementById("loginPassword");
+      if (unEl) unEl.value = "";
+      if (pwEl) pwEl.value = "";
+      this.hideLoginError();
+      this.switchLoginTab("login");
+      setTimeout(() => { if (unEl) unEl.focus(); }, 100);
+    }
+  },
+
+  closeLoginModal() {
+    const overlay = document.getElementById("loginModalOverlay");
+    if (overlay) overlay.classList.remove("active");
+  },
+
+  handleLoginOverlayClick(event) {
+    if (event.target === event.currentTarget) {
+      this.closeLoginModal();
+    }
+  },
+
+  switchLoginTab(tab) {
+    const loginPanel = document.getElementById("loginTabPanel");
+    const registerPanel = document.getElementById("registerTabPanel");
+    const loginBtn = document.getElementById("loginTabBtn");
+    const registerBtn = document.getElementById("registerTabBtn");
+
+    if (tab === "login") {
+      if (loginPanel) loginPanel.style.display = "";
+      if (registerPanel) registerPanel.style.display = "none";
+      if (loginBtn) loginBtn.classList.add("active");
+      if (registerBtn) registerBtn.classList.remove("active");
+    } else {
+      if (loginPanel) loginPanel.style.display = "none";
+      if (registerPanel) registerPanel.style.display = "";
+      if (loginBtn) loginBtn.classList.remove("active");
+      if (registerBtn) registerBtn.classList.add("active");
+    }
+  },
+
+  togglePasswordVisibility(fieldId) {
+    const field = document.getElementById(fieldId);
+    if (field) {
+      field.type = field.type === "password" ? "text" : "password";
+    }
+  },
+
+  hideLoginError() {
+    const errEl = document.getElementById("loginErrorMsg");
+    if (errEl) { errEl.style.display = "none"; errEl.textContent = ""; }
+  },
+
+  showLoginError(msg) {
+    const errEl = document.getElementById("loginErrorMsg");
+    if (errEl) { errEl.style.display = "block"; errEl.textContent = msg; }
+  },
+
+  handleLoginSubmit() {
+    const username = document.getElementById("loginUsername")?.value.trim();
+    const password = document.getElementById("loginPassword")?.value.trim();
+
+    if (!username || !password) {
+      this.showLoginError("Please enter your username and password.");
+      return;
+    }
+
+    const result = store.authenticateUser(username, password);
+    if (result.success) {
+      this.closeLoginModal();
+      this.showToast(`🎉 Welcome back, ${result.user.name || result.user.username}!`);
+      this.updateHeaderUserChip();
+      if (this.currentView === "account") this.renderAccountView();
+      if (this.currentView === "tracking") this.renderTrackingView();
+    } else {
+      this.showLoginError(result.message);
+    }
+  },
+
+  handleRegisterSubmit() {
+    const name = document.getElementById("regName")?.value.trim();
+    const username = document.getElementById("regUsername")?.value.trim();
+    const email = document.getElementById("regEmail")?.value.trim();
+    const password = document.getElementById("regPassword")?.value.trim();
+    const phone = document.getElementById("regPhone")?.value.trim();
+
+    const errEl = document.getElementById("registerErrorMsg");
+    const successEl = document.getElementById("registerSuccessMsg");
+
+    if (errEl) { errEl.style.display = "none"; errEl.textContent = ""; }
+    if (successEl) { successEl.style.display = "none"; }
+
+    if (!username || !password) {
+      if (errEl) { errEl.textContent = "Username and password are required."; errEl.style.display = "block"; }
+      return;
+    }
+    if (password.length < 4) {
+      if (errEl) { errEl.textContent = "Password must be at least 4 characters."; errEl.style.display = "block"; }
+      return;
+    }
+
+    const result = store.registerUser({ name, username, email, password, phone });
+    if (result.success) {
+      if (successEl) { successEl.textContent = `Account created! Welcome, ${result.user.name}. Signing you in...`; successEl.style.display = "block"; }
+      setTimeout(() => {
+        this.closeLoginModal();
+        this.showToast(`✨ Welcome to Art आलय, ${result.user.name}!`);
+        this.updateHeaderUserChip();
+        if (this.currentView === "account") this.renderAccountView();
+      }, 1400);
+    } else {
+      if (errEl) { errEl.textContent = result.message; errEl.style.display = "block"; }
+    }
+  },
+
+  quickLoginAs(username) {
+    const result = store.authenticateUser(username, username); // same as password
+    if (result.success) {
+      this.closeLoginModal();
+      this.showToast(`✨ Signed in as ${result.user.name || result.user.username}`);
+      this.updateHeaderUserChip();
+      this.updateCounters();
+      if (this.currentView === "account") this.renderAccountView();
+      if (this.currentView === "tracking") this.renderTrackingView();
+    } else {
+      this.showLoginError(result.message);
+    }
+  },
+
+  handleLogout() {
+    const user = store.getCurrentUser();
+    const name = user ? (user.name || user.username) : "";
+    store.logoutUser();
+    this.showToast(`👋 Signed out. See you again${name ? `, ${name}` : ""}!`);
+    this.updateHeaderUserChip();
+    this.updateCounters();
+    this.navigateTo("home");
+  },
+
+  handleHeaderUserClick() {
+    const user = store.getCurrentUser();
+    if (user) {
+      this.navigateTo("account");
+    } else {
+      this.openLoginModal();
+    }
   }
 };
 

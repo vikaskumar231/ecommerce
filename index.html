@@ -85,6 +85,12 @@
           <span class="action-counter" id="headerCartCount">0</span>
         </button>
 
+        <!-- User Login / Account Chip -->
+        <div class="header-user-chip" id="headerUserChip" onclick="App.handleHeaderUserClick()" title="Login / Account">
+          <div class="header-user-avatar" id="headerUserAvatar">👤</div>
+          <span class="header-user-label" id="headerUserLabel">Login</span>
+        </div>
+
         <!-- Quick Admin Mode Toggle -->
         <button class="admin-mode-pill" id="adminModeBtn" title="Toggle Admin Portal">
           <span>⚙️ Admin</span>
@@ -770,14 +776,12 @@
               type="text" 
               id="trackingSearchInput" 
               class="form-control" 
-              placeholder="Enter Order ID (e.g. ORD-RESIN-98421)" 
+              placeholder="Enter Order ID (e.g. ORD-VIKAS-101)" 
             />
             <button class="btn btn-primary" onclick="App.searchOrderTracking()">Track Order</button>
           </div>
-          <div style="font-size:0.8rem; color:var(--color-text-muted); margin-top:0.75rem; display:flex; gap:0.5rem; align-items:center;">
-            <span>Sample Live Orders:</span>
-            <button class="btn btn-secondary btn-sm" onclick="App.displayOrderTrackingDetails('ORD-RESIN-98421')">ORD-RESIN-98421 (In Curing)</button>
-            <button class="btn btn-secondary btn-sm" onclick="App.displayOrderTrackingDetails('ORD-RESIN-98112')">ORD-RESIN-98112 (Shipped)</button>
+          <div id="trackingQuickLinksWrap" style="font-size:0.8rem; color:var(--color-text-muted); margin-top:0.75rem; display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap;">
+            <!-- Dynamically populated with user's own orders -->
           </div>
         </div>
 
@@ -798,9 +802,10 @@
         <!-- Account Sidebar -->
         <aside class="account-sidebar-nav">
           <div class="account-user-badge">
-            <div class="account-avatar-large" id="accountAvatarLetter">P</div>
-            <h4 style="font-size:1.15rem; color:var(--color-primary-dark);" id="accountUserName">Pooja Sharma</h4>
-            <div style="font-size:0.8rem; color:var(--color-text-muted);" id="accountUserEmail">pooja.sharma@example.com</div>
+            <div class="account-avatar-large" id="accountAvatarLetter">V</div>
+            <h4 style="font-size:1.15rem; color:var(--color-primary-dark);" id="accountUserName">Vikas Kumar</h4>
+            <div style="font-size:0.8rem; color:var(--color-text-muted);" id="accountUserEmail">vikas@example.com</div>
+            <div style="font-size:0.75rem; color:var(--color-gold-dark); margin-top:0.2rem;" id="accountJoinedDate">Member since October 2026</div>
           </div>
 
           <div style="display:flex; flex-direction:column; gap:0.35rem;">
@@ -812,6 +817,15 @@
             </button>
             <button class="account-nav-btn" data-account-tab="bespoke" onclick="App.renderAccountTab('bespoke')">
               <span>🎨</span> <span>Bespoke Inquiries</span>
+            </button>
+            <button class="account-nav-btn" data-account-tab="profile" onclick="App.renderAccountTab('profile')">
+              <span>👤</span> <span>My Profile</span>
+            </button>
+          </div>
+
+          <div style="margin-top:auto; padding-top:1.5rem;">
+            <button class="btn btn-secondary" style="width:100%; font-size:0.85rem;" onclick="App.handleLogout()">
+              🚪 Sign Out
             </button>
           </div>
         </aside>
@@ -1146,6 +1160,112 @@
       </div>
     </div>
   </footer>
+
+  <!-- =========================================================================
+       LOGIN / REGISTER MODAL
+       ========================================================================= -->
+  <div class="login-modal-overlay" id="loginModalOverlay" onclick="App.handleLoginOverlayClick(event)">
+    <div class="login-modal-card" id="loginModalCard">
+
+      <!-- Modal Header -->
+      <div class="login-modal-header">
+        <div>
+          <div class="login-brand-name">Art <span class="brand-hindi">आलय</span></div>
+          <div class="login-modal-subtitle">Welcome back, artisan patron</div>
+        </div>
+        <button class="login-modal-close" onclick="App.closeLoginModal()" aria-label="Close">×</button>
+      </div>
+
+      <!-- Tab Switcher: Login / Register -->
+      <div class="login-tab-strip">
+        <button class="login-tab-btn active" id="loginTabBtn" onclick="App.switchLoginTab('login')">Sign In</button>
+        <button class="login-tab-btn" id="registerTabBtn" onclick="App.switchLoginTab('register')">New Account</button>
+      </div>
+
+      <!-- === LOGIN TAB === -->
+      <div id="loginTabPanel" class="login-tab-panel">
+
+        <!-- Quick Login Chips -->
+        <div class="login-quick-section">
+          <div class="login-quick-label">✨ Quick Login Demo Accounts</div>
+          <div class="login-quick-chips">
+            <button class="login-quick-chip chip-vikas" onclick="App.quickLoginAs('Vikas')">
+              <span class="chip-avatar">V</span>
+              <span>Vikas</span>
+            </button>
+            <button class="login-quick-chip chip-meenu" onclick="App.quickLoginAs('Meenu')">
+              <span class="chip-avatar">M</span>
+              <span>Meenu</span>
+            </button>
+            <button class="login-quick-chip chip-ananta" onclick="App.quickLoginAs('Ananta')">
+              <span class="chip-avatar">A</span>
+              <span>Ananta</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="login-divider"><span>or sign in manually</span></div>
+
+        <!-- Manual Login Form -->
+        <div class="login-form-body">
+          <div id="loginErrorMsg" class="login-error-msg" style="display:none;"></div>
+
+          <div class="form-group">
+            <label class="form-label">Username</label>
+            <input type="text" id="loginUsername" class="form-control" placeholder="e.g. Vikas" autocomplete="username" />
+          </div>
+          <div class="form-group" style="position:relative;">
+            <label class="form-label">Password</label>
+            <input type="password" id="loginPassword" class="form-control" placeholder="Enter password" autocomplete="current-password"
+              onkeydown="if(event.key==='Enter') App.handleLoginSubmit()" />
+            <button type="button" class="login-password-toggle" onclick="App.togglePasswordVisibility('loginPassword')" tabindex="-1">👁</button>
+          </div>
+
+          <button class="btn btn-primary" style="width:100%; margin-top:0.5rem; padding:0.8rem;" onclick="App.handleLoginSubmit()">
+            Sign In to My Account
+          </button>
+        </div>
+      </div>
+
+      <!-- === REGISTER TAB === -->
+      <div id="registerTabPanel" class="login-tab-panel" style="display:none;">
+        <div class="login-form-body">
+          <div id="registerErrorMsg" class="login-error-msg" style="display:none;"></div>
+          <div id="registerSuccessMsg" class="login-success-msg" style="display:none;"></div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label">Full Name *</label>
+              <input type="text" id="regName" class="form-control" placeholder="Priya Sharma" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Username *</label>
+              <input type="text" id="regUsername" class="form-control" placeholder="priyasharma" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" id="regEmail" class="form-control" placeholder="priya@example.com" />
+          </div>
+          <div class="form-group" style="position:relative;">
+            <label class="form-label">Password *</label>
+            <input type="password" id="regPassword" class="form-control" placeholder="Create a password"
+              onkeydown="if(event.key==='Enter') App.handleRegisterSubmit()" />
+            <button type="button" class="login-password-toggle" onclick="App.togglePasswordVisibility('regPassword')" tabindex="-1">👁</button>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Mobile Number</label>
+            <input type="tel" id="regPhone" class="form-control" placeholder="+91 98765 43210" />
+          </div>
+
+          <button class="btn btn-primary" style="width:100%; margin-top:0.5rem; padding:0.8rem;" onclick="App.handleRegisterSubmit()">
+            Create Account
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="js/data.js"></script>
