@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="coasterBg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#fdfbf7"/>
+      <stop offset="100%" stop-color="#f1ece1"/>
+    </radialGradient>
+    <radialGradient id="agateEmerald" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#6ee7b7"/>
+      <stop offset="30%" stop-color="#10b981"/>
+      <stop offset="70%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </radialGradient>
+    <radialGradient id="agateSapphire" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="30%" stop-color="#0284c7"/>
+      <stop offset="70%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#082f49"/>
+    </radialGradient>
+    <linearGradient id="goldEdgeGilded" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="30%" stop-color="#eab308"/>
+      <stop offset="70%" stop-color="#ca8a04"/>
+      <stop offset="100%" stop-color="#854d0e"/>
+    </linearGradient>
+    <filter id="coasterShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="6" dy="16" stdDeviation="14" flood-color="#064e3b" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="600" fill="url(#coasterBg)"/>
+
+  <!-- Left Coaster (Emerald Geode Agate) -->
+  <g filter="url(#coasterShadow)">
+    <!-- Organic Agate contour shape -->
+    <path d="M140 180 C210 160, 270 190, 290 250 C310 320, 260 380, 200 395 C130 410, 80 340, 95 260 C105 200, 110 185, 140 180 Z" 
+          fill="url(#agateEmerald)" 
+          stroke="url(#goldEdgeGilded)" 
+          stroke-width="7"/>
+
+    <!-- Concentric Agate mineral rings -->
+    <path d="M145 200 C195 185, 245 205, 260 255 C275 305, 235 355, 190 365 C135 375, 105 325, 115 265 C125 215, 125 205, 145 200 Z" 
+          fill="none" 
+          stroke="#a7f3d0" 
+          stroke-width="4" 
+          opacity="0.6"/>
+
+    <!-- Crushed crystal quartz center -->
+    <circle cx="190" cy="275" r="28" fill="#ffffff" opacity="0.85"/>
+    <polygon points="180,265 195,255 205,270 190,285" fill="#fef08a" opacity="0.9"/>
+    <circle cx="180" cy="285" r="4" fill="#ca8a04"/>
+    <circle cx="205" cy="270" r="3.5" fill="#ca8a04"/>
+
+    <!-- Gold leaf flakes -->
+    <circle cx="160" cy="230" r="4" fill="#fef08a"/>
+    <circle cx="240" cy="240" r="5" fill="#fef08a"/>
+    <circle cx="220" cy="330" r="4.5" fill="#fef08a"/>
+    <circle cx="140" cy="330" r="3.5" fill="#fef08a"/>
+  </g>
+
+  <!-- Right Coaster (Sapphire Blue Agate, slightly overlapping) -->
+  <g filter="url(#coasterShadow)">
+    <path d="M370 170 C440 150, 500 180, 515 245 C530 315, 480 385, 420 395 C350 405, 305 345, 320 260 C330 195, 335 180, 370 170 Z" 
+          fill="url(#agateSapphire)" 
+          stroke="url(#goldEdgeGilded)" 
+          stroke-width="7"/>
+
+    <!-- Rings -->
+    <path d="M375 190 C425 175, 475 195, 485 245 C495 295, 455 350, 410 360 C355 370, 325 320, 335 260 C345 210, 345 200, 375 190 Z" 
+          fill="none" 
+          stroke="#bae6fd" 
+          stroke-width="4" 
+          opacity="0.6"/>
+
+    <!-- Crystal center -->
+    <circle cx="410" cy="270" r="26" fill="#ffffff" opacity="0.85"/>
+    <polygon points="400,260 415,250 425,265 410,280" fill="#fef08a" opacity="0.9"/>
+
+    <!-- Gold flakes -->
+    <circle cx="380" cy="225" r="4" fill="#fef08a"/>
+    <circle cx="460" cy="235" r="5" fill="#fef08a"/>
+    <circle cx="440" cy="330" r="4.5" fill="#fef08a"/>
+    <circle cx="360" cy="325" r="3.5" fill="#fef08a"/>
+  </g>
+
+  <text x="300" y="525" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="700" fill="#064e3b" text-anchor="middle" letter-spacing="2">GILDED AGATE GEODE COASTERS</text>
+  <text x="300" y="550" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" fill="#ca8a04" text-anchor="middle" letter-spacing="3">SET OF 4 • 24K LIQUID GOLD RIM • HEAT RESISTANT</text>
+</svg>

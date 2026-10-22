@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="softBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff1f2"/>
+      <stop offset="50%" stop-color="#fce7f3"/>
+      <stop offset="100%" stop-color="#f3e8ff"/>
+    </linearGradient>
+    <linearGradient id="resinLetter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6"/>
+      <stop offset="50%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#be185d"/>
+    </linearGradient>
+    <linearGradient id="goldKeyring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="35%" stop-color="#eab308"/>
+      <stop offset="70%" stop-color="#ca8a04"/>
+      <stop offset="100%" stop-color="#854d0e"/>
+    </linearGradient>
+    <filter id="kcShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="4" dy="16" stdDeviation="14" flood-color="#831843" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="600" fill="url(#softBg)"/>
+
+  <!-- Gold Keyring & Clasp Chain -->
+  <g>
+    <!-- Split Ring -->
+    <circle cx="300" cy="110" r="45" fill="none" stroke="url(#goldKeyring)" stroke-width="8"/>
+    <!-- Chain Links -->
+    <ellipse cx="300" cy="175" rx="8" ry="14" fill="none" stroke="url(#goldKeyring)" stroke-width="6"/>
+    <ellipse cx="300" cy="205" rx="8" ry="14" fill="none" stroke="url(#goldKeyring)" stroke-width="6"/>
+    <!-- Swivel Eye Bolt -->
+    <circle cx="300" cy="235" r="7" fill="url(#goldKeyring)"/>
+  </g>
+
+  <!-- Alphabet 'A' Floral Resin Charm -->
+  <g filter="url(#kcShadow)">
+    <!-- Base Shape 'A' -->
+    <path d="M300 240 L390 440 L345 440 L325 390 L275 390 L255 440 L210 440 Z M300 320 L285 360 L315 360 Z" fill="url(#resinLetter)"/>
+    <!-- Specular Gloss Highlight -->
+    <path d="M300 245 L380 435 L355 435 L330 380 L290 380 L300 245 Z" fill="#ffffff" opacity="0.3"/>
+    
+    <!-- Preserved Baby's Breath & Dried Flowers Inside -->
+    <circle cx="290" cy="300" r="6" fill="#ffffff" opacity="0.95"/>
+    <circle cx="300" cy="315" r="5" fill="#fbcfe8" opacity="0.9"/>
+    <circle cx="310" cy="295" r="4" fill="#ffffff" opacity="0.95"/>
+    
+    <circle cx="265" cy="415" r="6" fill="#ffffff" opacity="0.95"/>
+    <circle cx="255" cy="400" r="5" fill="#fef08a" opacity="0.95"/>
+    <circle cx="335" cy="415" r="6" fill="#ffffff" opacity="0.95"/>
+    <circle cx="345" cy="400" r="5" fill="#fbcfe8" opacity="0.95"/>
+
+    <!-- Gold Foil Flakes Suspended in Resin -->
+    <polygon points="280,270 286,265 290,275 282,278" fill="url(#goldKeyring)"/>
+    <polygon points="315,275 322,268 326,280 318,284" fill="url(#goldKeyring)"/>
+    <polygon points="270,350 278,345 280,355 272,358" fill="url(#goldKeyring)"/>
+    <polygon points="325,350 334,346 332,358 324,357" fill="url(#goldKeyring)"/>
+    <circle cx="300" cy="265" r="3" fill="#fef08a"/>
+    <circle cx="330" cy="370" r="4" fill="#fef08a"/>
+    <circle cx="270" cy="380" r="3.5" fill="#fef08a"/>
+  </g>
+
+  <!-- Suede Leather Fringe Tassel Attachment -->
+  <g filter="url(#kcShadow)">
+    <circle cx="370" cy="235" r="6" fill="url(#goldKeyring)"/>
+    <path d="M370 235 L370 260" stroke="url(#goldKeyring)" stroke-width="4"/>
+    <!-- Tassel Cap -->
+    <path d="M360 260 L380 260 L378 275 L362 275 Z" fill="url(#goldKeyring)"/>
+    <!-- Tassel Strands -->
+    <path d="M362 275 L355 350 L385 350 L378 275 Z" fill="#db2777"/>
+  </g>
+
+  <text x="300" y="525" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="700" fill="#9d174d" text-anchor="middle" letter-spacing="2">INITIAL ALPHABET KEYCHAINS</text>
+  <text x="300" y="550" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" fill="#be185d" text-anchor="middle" letter-spacing="3">CUSTOM LETTERS A-Z • DRIED FLOWERS & GOLD</text>
+</svg>

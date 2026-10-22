@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="clockBg" cx="45%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="35%" stop-color="#0369a1"/>
+      <stop offset="65%" stop-color="#0c4a6e"/>
+      <stop offset="95%" stop-color="#082f49"/>
+      <stop offset="100%" stop-color="#031624"/>
+    </radialGradient>
+    <linearGradient id="goldRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="25%" stop-color="#eab308"/>
+      <stop offset="50%" stop-color="#ca8a04"/>
+      <stop offset="75%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#854d0e"/>
+    </linearGradient>
+    <linearGradient id="crystalShimmer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#bae6fd" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="shadow3D" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#0c4a6e" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="600" height="600" fill="#f8fafc"/>
+
+  <!-- Clock Outer Rim with 24K Hand-Gilded Edge -->
+  <circle cx="300" cy="285" r="230" fill="none" stroke="url(#goldRim)" stroke-width="12" filter="url(#shadow3D)"/>
+  
+  <!-- Clock Resin Face -->
+  <circle cx="300" cy="285" r="224" fill="url(#clockBg)"/>
+
+  <!-- Natural Geode Crystal Fissure across the center -->
+  <path d="M120 220 Q200 240, 260 210 T380 260 T480 240 L470 280 Q390 300, 310 270 T180 300 T120 250 Z" fill="url(#crystalShimmer)" opacity="0.85"/>
+  <path d="M140 235 L160 215 L180 245 L210 225 L230 250 L270 220 L310 260 L360 230 L400 270 L440 245 L460 260" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.9"/>
+  
+  <!-- Gold vein accents through geode -->
+  <path d="M130 240 Q240 265, 340 245 T470 255" stroke="url(#goldRim)" stroke-width="4" fill="none"/>
+  <path d="M160 260 Q270 285, 360 270 T450 275" stroke="url(#goldRim)" stroke-width="2.5" fill="none"/>
+
+  <!-- Gold Flakes Scatter in Resin -->
+  <circle cx="200" cy="160" r="5" fill="#fef08a"/>
+  <circle cx="225" cy="140" r="3" fill="#ca8a04"/>
+  <circle cx="380" cy="150" r="6" fill="#fef08a"/>
+  <circle cx="420" cy="180" r="4" fill="#ca8a04"/>
+  <circle cx="210" cy="380" r="5" fill="#fef08a"/>
+  <circle cx="390" cy="390" r="6" fill="#fef08a"/>
+  <circle cx="330" cy="420" r="4" fill="#ca8a04"/>
+
+  <!-- Roman Numerals (XII, III, VI, IX) in Luxury Gold -->
+  <!-- XII -->
+  <text x="300" y="115" font-family="'Cinzel', serif" font-size="28" font-weight="700" fill="url(#goldRim)" text-anchor="middle">XII</text>
+  <!-- III -->
+  <text x="480" y="295" font-family="'Cinzel', serif" font-size="28" font-weight="700" fill="url(#goldRim)" text-anchor="middle">III</text>
+  <!-- VI -->
+  <text x="300" y="475" font-family="'Cinzel', serif" font-size="28" font-weight="700" fill="url(#goldRim)" text-anchor="middle">VI</text>
+  <!-- IX -->
+  <text x="120" y="295" font-family="'Cinzel', serif" font-size="28" font-weight="700" fill="url(#goldRim)" text-anchor="middle">IX</text>
+
+  <!-- Hour markers for other hours -->
+  <circle cx="395" cy="140" r="5" fill="url(#goldRim)"/>
+  <circle cx="460" cy="205" r="5" fill="url(#goldRim)"/>
+  <circle cx="460" cy="375" r="5" fill="url(#goldRim)"/>
+  <circle cx="395" cy="440" r="5" fill="url(#goldRim)"/>
+  <circle cx="205" cy="440" r="5" fill="url(#goldRim)"/>
+  <circle cx="140" cy="375" r="5" fill="url(#goldRim)"/>
+  <circle cx="140" cy="205" r="5" fill="url(#goldRim)"/>
+  <circle cx="205" cy="140" r="5" fill="url(#goldRim)"/>
+
+  <!-- Clock Hands (Polished Brass Gold) -->
+  <!-- Hour Hand -->
+  <polygon points="296,285 300,180 304,285" fill="url(#goldRim)"/>
+  <!-- Minute Hand -->
+  <polygon points="297,285 300,140 303,285" transform="rotate(65 300 285)" fill="url(#goldRim)"/>
+  <!-- Center Gold Cap -->
+  <circle cx="300" cy="285" r="10" fill="url(#goldRim)"/>
+  <circle cx="300" cy="285" r="4" fill="#082f49"/>
+
+  <!-- Bottom Brand Text -->
+  <text x="300" y="545" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="700" fill="#0c4a6e" text-anchor="middle" letter-spacing="2">GEODE RESIN WALL CLOCK</text>
+  <text x="300" y="570" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" fill="#ca8a04" text-anchor="middle" letter-spacing="3">SILENT SWEEP • NATURAL RAW QUARTZ</text>
+</svg>
