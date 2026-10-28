@@ -1,0 +1,46 @@
+[
+  {
+    "id": "rev-1",
+    "author": "Shreya Mukherjee",
+    "city": "Bengaluru",
+    "rating": 5,
+    "date": "18 Oct 2026",
+    "product": "Wedding Varmala Garland Flower Preservation",
+    "comment": "I was so nervous sending my wedding varmala all the way from Bangalore, but Art आलय (Art Alay) Studio kept me updated at every stage! When the hexagon block arrived, my husband and I literally had tears in our eyes. The flowers look so vibrant and the finish is like diamond crystal!",
+    "verified": true,
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
+  },
+  {
+    "id": "rev-2",
+    "author": "Rohan & Aditi Sharma",
+    "city": "Mumbai",
+    "rating": 5,
+    "date": "12 Oct 2026",
+    "product": "Luxury Teak Wood & Emerald River Resin Home Nameplate",
+    "comment": "The nameplate is pure luxury! Our guests constantly ask where we bought it. The 3D gold letters and deep green emerald river with real gold flakes look even better than the photos. Super sturdy packaging too.",
+    "verified": true,
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80"
+  },
+  {
+    "id": "rev-3",
+    "author": "Kavita Singhal",
+    "city": "Delhi NCR",
+    "rating": 5,
+    "date": "05 Oct 2026",
+    "product": "Shubh Bandhan Resin Lotus Toran & Ganesha Shubh Labh",
+    "comment": "Ordered the festive toran and Shubh Labh pair for Diwali. Real gamechanger! Unlike fresh flower torans that spoil in two days, this is washable, heavy, and sparkles beautifully under our doorway light.",
+    "verified": true,
+    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80"
+  },
+  {
+    "id": "rev-4",
+    "author": "Ananya Deshmukh",
+    "city": "Pune",
+    "rating": 5,
+    "date": "28 Sep 2026",
+    "product": "Royal Sapphire Geode Wall Clock",
+    "comment": "The silent sweep is completely noiseless and the quartz crystals shimmer in the sunlight. Truly a centerpiece for my living room wall. Packaging was double-boxed with wooden reinforcement.",
+    "verified": true,
+    "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80"
+  }
+]

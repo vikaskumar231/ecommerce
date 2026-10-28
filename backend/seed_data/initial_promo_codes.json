@@ -1,0 +1,26 @@
+[
+  {
+    "code": "ARTALAY10",
+    "discountPercent": 10,
+    "minOrder": 500,
+    "description": "10% OFF on all handcrafted items"
+  },
+  {
+    "code": "AURA10",
+    "discountPercent": 10,
+    "minOrder": 500,
+    "description": "10% OFF on all handcrafted items"
+  },
+  {
+    "code": "FESTIVE15",
+    "discountPercent": 15,
+    "minOrder": 1500,
+    "description": "15% Festival discount on orders above ₹1,500"
+  },
+  {
+    "code": "FIRSTRESIN",
+    "discountPercent": 20,
+    "minOrder": 999,
+    "description": "20% OFF for first-time art collectors"
+  }
+]

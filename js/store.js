@@ -1,6 +1,11 @@
 /**
- * AuraResin Studio - LocalStorage State Store
- * Manages reactive data, cart, orders, wishlist, bespoke inquiries, and admin mutations
+ * AuraResin Studio - Store & Database Synchronizer
+ * Connects the front end with the Python Business Tier and Database:
+ * - Fetches product catalog directly from the database (/api/products)
+ * - Persists customer orders directly to the database (/api/orders)
+ * - Persists bespoke custom requests to the database (/api/custom-requests)
+ * - Reads database configuration and masked credentials (/api/system/secrets-info)
+ * - Resilient offline fallback via localStorage cache
  */
 
 const STORAGE_KEYS = {
@@ -28,11 +33,25 @@ const DEFAULT_CATEGORY_IMAGES = {
 
 class Store {
   constructor() {
+    // Determine API Base URL for Python Business Tier
+    this.apiBase = (window.location.port === "8000" || window.location.origin.includes("8000"))
+      ? ""
+      : (window.location.protocol === "file:" ? "http://127.0.0.1:8000" : "http://127.0.0.1:8000");
+
+    this.isBackendConnected = false;
+    this.backendSecrets = null;
+    this.dbProducts = null;
+    this.dbOrders = null;
+    this.dbCategories = null;
+    this.dbCustomRequests = null;
+
     this.init();
+    // Auto-sync with Python database tier
+    this.syncWithDatabase();
   }
 
   init() {
-    // Seed initial products if not present or migrate with local images
+    // Seed initial products cache if not present
     if (!localStorage.getItem(STORAGE_KEYS.PRODUCTS)) {
       const seeded = INITIAL_PRODUCTS.map(p => {
         const localImg = DEFAULT_CATEGORY_IMAGES[p.category] || "images/wall-clock.svg";
@@ -56,7 +75,6 @@ class Store {
       users = [...INITIAL_USERS];
       localStorage.setItem(STORAGE_KEYS.USERS, JSON.stringify(users));
     } else {
-      // Ensure the three default users (Vikas, Meenu, Ananta) exist
       INITIAL_USERS.forEach(defUser => {
         const exists = users.some(u => u.username.toLowerCase() === defUser.username.toLowerCase());
         if (!exists) {
@@ -72,11 +90,11 @@ class Store {
       localStorage.setItem(STORAGE_KEYS.CURRENT_USER, JSON.stringify(defaultUser));
     }
 
-    // Seed initial sample orders tagged by user
+    // Seed initial sample orders
     if (!localStorage.getItem(STORAGE_KEYS.ORDERS)) {
       localStorage.setItem(STORAGE_KEYS.ORDERS, JSON.stringify(INITIAL_SAMPLE_ORDERS));
     }
-    // Seed initial custom requests tagged by user
+    // Seed initial custom requests
     if (!localStorage.getItem(STORAGE_KEYS.CUSTOM_REQUESTS)) {
       localStorage.setItem(STORAGE_KEYS.CUSTOM_REQUESTS, JSON.stringify(INITIAL_CUSTOM_REQUESTS));
     }
@@ -88,13 +106,91 @@ class Store {
     }
   }
 
-  // --- PRODUCTS ---
+  // --- DATABASE SYNCHRONIZATION WITH PYTHON BUSINESS TIER ---
+  async syncWithDatabase() {
+    try {
+      console.log(`[Store] Connecting to Python Business Tier at ${this.apiBase || 'current host'}...`);
+
+      // 1. Verify health & secrets configuration
+      const secretsRes = await fetch(`${this.apiBase}/api/system/secrets-info`, { method: "GET" });
+      if (secretsRes.ok) {
+        const secretsJson = await secretsRes.json();
+        this.isBackendConnected = true;
+        this.backendSecrets = secretsJson.data;
+        console.log(`[Store] Business Tier Connected! Secrets file loaded: ${this.backendSecrets.secrets_file_name}`);
+        this.emitChange("backend_status");
+      }
+
+      // 2. Fetch product catalog stored in database
+      const prodRes = await fetch(`${this.apiBase}/api/products`, { method: "GET" });
+      if (prodRes.ok) {
+        const prodData = await prodRes.json();
+        if (prodData.success && Array.isArray(prodData.products) && prodData.products.length > 0) {
+          this.dbProducts = prodData.products;
+          localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(prodData.products));
+          console.log(`[Store] Successfully loaded ${prodData.products.length} products from database.`);
+          this.emitChange("products");
+        }
+      }
+
+      // 3. Fetch categories stored in database with live product counts
+      const catRes = await fetch(`${this.apiBase}/api/categories`, { method: "GET" });
+      if (catRes.ok) {
+        const catData = await catRes.json();
+        if (catData.success && Array.isArray(catData.categories)) {
+          this.dbCategories = catData.categories;
+          this.emitChange("categories");
+        }
+      }
+
+      // 4. Fetch customer orders stored in database
+      const orderRes = await fetch(`${this.apiBase}/api/orders`, { method: "GET" });
+      if (orderRes.ok) {
+        const orderData = await orderRes.json();
+        if (orderData.success && Array.isArray(orderData.orders)) {
+          this.dbOrders = orderData.orders;
+          localStorage.setItem(STORAGE_KEYS.ORDERS, JSON.stringify(orderData.orders));
+          console.log(`[Store] Successfully loaded ${orderData.orders.length} orders from database.`);
+          this.emitChange("orders");
+        }
+      }
+
+      // 5. Fetch bespoke custom requests stored in database
+      const reqRes = await fetch(`${this.apiBase}/api/custom-requests`, { method: "GET" });
+      if (reqRes.ok) {
+        const reqData = await reqRes.json();
+        if (reqData.success && Array.isArray(reqData.requests)) {
+          this.dbCustomRequests = reqData.requests;
+          localStorage.setItem(STORAGE_KEYS.CUSTOM_REQUESTS, JSON.stringify(reqData.requests));
+          this.emitChange("custom_requests");
+        }
+      }
+
+      return { success: true, count: this.dbProducts ? this.dbProducts.length : 0 };
+    } catch (err) {
+      console.warn("[Store] Python backend not reachable, operating in offline/localStorage mode:", err);
+      this.isBackendConnected = false;
+      this.emitChange("backend_status");
+      return { success: false, error: err.message };
+    }
+  }
+
+  getBackendInfo() {
+    return {
+      connected: this.isBackendConnected,
+      secrets: this.backendSecrets
+    };
+  }
+
+  // --- PRODUCTS (Rendered from Database) ---
   getProducts() {
+    if (this.dbProducts && Array.isArray(this.dbProducts) && this.dbProducts.length > 0) {
+      return this.dbProducts;
+    }
     try {
       const data = localStorage.getItem(STORAGE_KEYS.PRODUCTS);
       if (data) {
         const prods = JSON.parse(data);
-        // Ensure every product has a valid image fallback
         return prods.map(p => {
           if (!p.images || p.images.length === 0) {
             p.images = [DEFAULT_CATEGORY_IMAGES[p.category] || "images/wall-clock.svg"];
@@ -109,26 +205,44 @@ class Store {
     }
   }
 
-
   getProductById(id) {
     const products = this.getProducts();
     return products.find(p => p.id === id) || null;
+  }
+
+  getCategories() {
+    if (this.dbCategories && Array.isArray(this.dbCategories) && this.dbCategories.length > 0) {
+      return this.dbCategories;
+    }
+    return INITIAL_CATEGORIES;
   }
 
   addProduct(newProduct) {
     const products = this.getProducts();
     const productWithId = {
       ...newProduct,
-      id: "prod-" + Date.now(),
+      id: newProduct.id || ("prod-" + Date.now()),
       rating: 5.0,
       reviewCount: 1,
       isFeatured: newProduct.isFeatured || false,
       isBestseller: newProduct.isBestseller || false,
       isNew: true
     };
+
     products.unshift(productWithId);
+    this.dbProducts = products;
     localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(products));
     this.emitChange("products");
+
+    // Asynchronously commit to Python Business Tier & Database
+    if (this.isBackendConnected) {
+      fetch(`${this.apiBase}/api/products`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(productWithId)
+      }).catch(err => console.error("Error adding product to DB:", err));
+    }
+
     return productWithId;
   }
 
@@ -137,8 +251,19 @@ class Store {
     const index = products.findIndex(p => p.id === id);
     if (index !== -1) {
       products[index] = { ...products[index], ...updatedFields };
+      this.dbProducts = products;
       localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(products));
       this.emitChange("products");
+
+      // Asynchronously update in Database
+      if (this.isBackendConnected) {
+        fetch(`${this.apiBase}/api/products/${id}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(updatedFields)
+        }).catch(err => console.error("Error updating product in DB:", err));
+      }
+
       return products[index];
     }
     return null;
@@ -150,8 +275,19 @@ class Store {
     if (prod) {
       if (!Array.isArray(prod.images)) prod.images = [];
       prod.images[0] = newImageUrl;
+      this.dbProducts = products;
       localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(products));
       this.emitChange("products");
+
+      // Asynchronously persist new image in Database
+      if (this.isBackendConnected) {
+        fetch(`${this.apiBase}/api/products/${productId}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ images: prod.images })
+        }).catch(err => console.error("Error updating product image in DB:", err));
+      }
+
       return prod;
     }
     return null;
@@ -165,6 +301,7 @@ class Store {
       images[0] = localImg;
       return { ...p, images };
     });
+    this.dbProducts = reset;
     localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(reset));
     this.emitChange("products");
     return reset;
@@ -173,11 +310,20 @@ class Store {
   deleteProduct(id) {
     let products = this.getProducts();
     products = products.filter(p => p.id !== id);
+    this.dbProducts = products;
     localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(products));
     this.emitChange("products");
+
+    // Asynchronously delete in Database
+    if (this.isBackendConnected) {
+      fetch(`${this.apiBase}/api/products/${id}`, {
+        method: "DELETE"
+      }).catch(err => console.error("Error deleting product from DB:", err));
+    }
   }
 
   resetProductsToDefault() {
+    this.dbProducts = [...INITIAL_PRODUCTS];
     localStorage.setItem(STORAGE_KEYS.PRODUCTS, JSON.stringify(INITIAL_PRODUCTS));
     this.emitChange("products");
   }
@@ -194,7 +340,6 @@ class Store {
 
   addToCart(item) {
     const cart = this.getCart();
-    // Unique key considering custom configuration
     const configHash = JSON.stringify(item.customOptions || {});
     const existingIndex = cart.findIndex(c => c.id === item.id && JSON.stringify(c.customOptions || {}) === configHash);
 
@@ -264,7 +409,6 @@ class Store {
       discount = Math.round((subtotal * coupon.discountPercent) / 100);
     }
 
-    // Free delivery above ₹999, else ₹99
     const shipping = subtotal > 0 && (subtotal - discount) >= 999 ? 0 : (subtotal > 0 ? 99 : 0);
     const total = Math.max(0, subtotal - discount + shipping);
 
@@ -308,7 +452,7 @@ class Store {
     this.emitChange("cart");
   }
 
-  // --- WISHLIST (PER LOGGED-IN USER) ---
+  // --- WISHLIST ---
   getWishlist() {
     const user = this.getCurrentUser();
     if (user && Array.isArray(user.wishlist)) {
@@ -349,8 +493,11 @@ class Store {
     return list.includes(productId);
   }
 
-  // --- ORDERS (ISOLATED PER USER) ---
+  // --- ORDERS (Stored in Database) ---
   getOrders() {
+    if (this.dbOrders && Array.isArray(this.dbOrders) && this.dbOrders.length > 0) {
+      return this.dbOrders;
+    }
     try {
       const data = localStorage.getItem(STORAGE_KEYS.ORDERS);
       return data ? JSON.parse(data) : INITIAL_SAMPLE_ORDERS;
@@ -398,9 +545,24 @@ class Store {
     };
 
     orders.unshift(newOrder);
+    this.dbOrders = orders;
     localStorage.setItem(STORAGE_KEYS.ORDERS, JSON.stringify(orders));
     this.clearCart();
     this.emitChange("orders");
+
+    // Asynchronously commit order to Python Business Tier and Database
+    if (this.isBackendConnected) {
+      fetch(`${this.apiBase}/api/orders`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newOrder)
+      }).then(r => r.json()).then(res => {
+        if (res.success && res.order) {
+          console.log(`[Store] Order ${res.order.orderId} committed to database.`);
+        }
+      }).catch(err => console.error("Error saving order to DB:", err));
+    }
+
     return newOrder;
   }
 
@@ -430,13 +592,27 @@ class Store {
       });
     }
 
+    this.dbOrders = orders;
     localStorage.setItem(STORAGE_KEYS.ORDERS, JSON.stringify(orders));
     this.emitChange("orders");
+
+    // Update in Database
+    if (this.isBackendConnected) {
+      fetch(`${this.apiBase}/api/orders/${orderId}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ status: newStatus, note: artisanNote })
+      }).catch(err => console.error("Error updating order status in DB:", err));
+    }
+
     return order;
   }
 
-  // --- BESPOKE CUSTOM REQUESTS (ISOLATED PER USER) ---
+  // --- BESPOKE CUSTOM REQUESTS (Stored in Database) ---
   getCustomRequests() {
+    if (this.dbCustomRequests && Array.isArray(this.dbCustomRequests) && this.dbCustomRequests.length > 0) {
+      return this.dbCustomRequests;
+    }
     try {
       const data = localStorage.getItem(STORAGE_KEYS.CUSTOM_REQUESTS);
       return data ? JSON.parse(data) : INITIAL_CUSTOM_REQUESTS;
@@ -463,8 +639,19 @@ class Store {
       ...req
     };
     requests.unshift(newReq);
+    this.dbCustomRequests = requests;
     localStorage.setItem(STORAGE_KEYS.CUSTOM_REQUESTS, JSON.stringify(requests));
     this.emitChange("custom_requests");
+
+    // Persist in Database
+    if (this.isBackendConnected) {
+      fetch(`${this.apiBase}/api/custom-requests`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newReq)
+      }).catch(err => console.error("Error saving custom request to DB:", err));
+    }
+
     return newReq;
   }
 
@@ -473,8 +660,19 @@ class Store {
     const req = requests.find(r => r.id === id);
     if (req) {
       req.status = newStatus;
+      this.dbCustomRequests = requests;
       localStorage.setItem(STORAGE_KEYS.CUSTOM_REQUESTS, JSON.stringify(requests));
       this.emitChange("custom_requests");
+
+      // Update in Database
+      if (this.isBackendConnected) {
+        fetch(`${this.apiBase}/api/custom-requests/${id}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ status: newStatus })
+        }).catch(err => console.error("Error updating custom request status in DB:", err));
+      }
+
       return req;
     }
     return null;
@@ -503,7 +701,6 @@ class Store {
     }
   }
 
-  // Backwards compatible alias
   getUser() {
     return this.getCurrentUser();
   }
@@ -583,6 +780,16 @@ class Store {
     this.saveUsers(users);
     localStorage.setItem(STORAGE_KEYS.CURRENT_USER, JSON.stringify(newUser));
     this.emitChange("user");
+
+    // Also persist user to Database
+    if (this.isBackendConnected) {
+      fetch(`${this.apiBase}/api/auth/register`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newUser)
+      }).catch(err => console.error("Error saving user to DB:", err));
+    }
+
     return { success: true, user: newUser };
   }
 
@@ -592,7 +799,6 @@ class Store {
     const updated = { ...currentUser, ...userData };
     localStorage.setItem(STORAGE_KEYS.CURRENT_USER, JSON.stringify(updated));
 
-    // Also update in users database
     const users = this.getUsers();
     const idx = users.findIndex(u => u.username.toLowerCase() === updated.username.toLowerCase());
     if (idx !== -1) {
@@ -601,6 +807,16 @@ class Store {
     }
 
     this.emitChange("user");
+
+    // Update in Database
+    if (this.isBackendConnected) {
+      fetch(`${this.apiBase}/api/users/${updated.username}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(userData)
+      }).catch(err => console.error("Error updating user in DB:", err));
+    }
+
     return updated;
   }
 

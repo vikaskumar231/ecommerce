@@ -2991,3 +2991,109 @@ h1, h2, h3, h4, h5, h6 {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* ==========================================================================
+   Python Business Tier & Database Status Pill & Diagnostics
+   ========================================================================== */
+.backend-tier-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #34d399;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none !important;
+}
+
+.backend-tier-status-pill:hover {
+  background: rgba(16, 185, 129, 0.28);
+  border-color: #34d399;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+}
+
+.backend-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  display: inline-block;
+}
+
+.backend-status-dot.pulse-online {
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulseDot 2s infinite;
+}
+
+.backend-status-dot.offline {
+  background: #f59e0b;
+  box-shadow: none;
+  animation: none;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.diagnostics-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.diagnostics-metric-card {
+  background: #fcfaf6;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+.diagnostics-metric-val {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.diagnostics-metric-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.diagnostics-secrets-box {
+  background: #1e252b;
+  color: #e2e8f0;
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  font-family: monospace;
+  font-size: 0.825rem;
+  line-height: 1.55;
+  margin-top: 1rem;
+  overflow-x: auto;
+}
+
+.diagnostics-badge-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+

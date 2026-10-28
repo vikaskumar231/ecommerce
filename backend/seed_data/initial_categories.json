@@ -1,0 +1,81 @@
+[
+  {
+    "id": "all",
+    "name": "All Collections",
+    "icon": "sparkles",
+    "count": 36,
+    "tagline": "Explore our entire handcrafted repertoire"
+  },
+  {
+    "id": "earrings",
+    "name": "Earrings",
+    "icon": "gem",
+    "count": 4,
+    "image": "images/earrings.svg",
+    "description": "Ultra-lightweight hypoallergenic earrings with real pressed botanicals and 24K gold foil."
+  },
+  {
+    "id": "wall-clock",
+    "name": "Wall Clock",
+    "icon": "clock",
+    "count": 4,
+    "image": "images/wall-clock.svg",
+    "description": "Statement geode resin wall clocks with genuine quartz crystals and silent sweep mechanisms."
+  },
+  {
+    "id": "book-mark",
+    "name": "Book Mark",
+    "icon": "bookmark",
+    "count": 4,
+    "image": "images/book-mark.svg",
+    "description": "Delicate crystal-clear resin bookmarks with preserved wildflowers, gold dust, and silk tassels."
+  },
+  {
+    "id": "key-chains",
+    "name": "Key Chains",
+    "icon": "key",
+    "count": 4,
+    "image": "images/key-chains.svg",
+    "description": "Personalized alphabet monogram keychains, Spotify scannable codes, and keepsake keyrings."
+  },
+  {
+    "id": "toran",
+    "name": "Toran",
+    "icon": "flower-2",
+    "count": 4,
+    "image": "images/toran.svg",
+    "description": "Handcrafted auspicious festive resin door hangings with lotus motifs, marigolds, and brass bells."
+  },
+  {
+    "id": "shubh-labh",
+    "name": "Shubh Labh",
+    "icon": "sun",
+    "count": 5,
+    "image": "images/shubh-labh/ShubhLabh1_focus.jpg",
+    "description": "Traditional auspicious entrance charms and temple jharokhas hand-poured in high-gloss resin with gold calligraphy."
+  },
+  {
+    "id": "name-plates",
+    "name": "Name Plates",
+    "icon": "home",
+    "count": 4,
+    "image": "images/name-plates.svg",
+    "description": "Luxury custom home entrance nameplates blending cured river resin, teak wood, and 3D acrylic."
+  },
+  {
+    "id": "coasters",
+    "name": "Coasters",
+    "icon": "disc",
+    "count": 4,
+    "image": "images/coasters.svg",
+    "description": "Hand-poured agate geode and ocean surf drink coasters with gilded metallic rim accents."
+  },
+  {
+    "id": "customized-gifts",
+    "name": "Customized Gifts",
+    "icon": "gift",
+    "count": 4,
+    "image": "images/customized-gifts.svg",
+    "description": "Wedding varmala garland flower preservation blocks, baby birth keepsake cubes, and custom photo frames."
+  }
+]

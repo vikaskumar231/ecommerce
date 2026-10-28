@@ -1,0 +1,56 @@
+[
+  {
+    "username": "Vikas",
+    "password": "Vikas",
+    "name": "Vikas Kumar",
+    "email": "vikas@example.com",
+    "phone": "+91 98100 12345",
+    "address": "104, Royal Palms Residency, 100ft Road, Indiranagar",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560038",
+    "wishlist": [
+      "prod-clk-01",
+      "prod-np-01"
+    ],
+    "avatar": "V",
+    "joinedDate": "October 2026",
+    "role": "admin"
+  },
+  {
+    "username": "Meenu",
+    "password": "Meenu",
+    "name": "Meenu Sharma",
+    "email": "meenu.sharma@example.com",
+    "phone": "+91 98200 67890",
+    "address": "Flat 702, Silver Sands Apt, Carter Road, Bandra West",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400050",
+    "wishlist": [
+      "prod-ear-01",
+      "prod-trn-01"
+    ],
+    "avatar": "M",
+    "joinedDate": "October 2026",
+    "role": "user"
+  },
+  {
+    "username": "Ananta",
+    "password": "Ananta",
+    "name": "Ananta Verma",
+    "email": "ananta.verma@example.com",
+    "phone": "+91 98300 45678",
+    "address": "Villa 18, Lakeview Enclave, Whitefield",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "pincode": "560066",
+    "wishlist": [
+      "prod-cst-01",
+      "prod-bm-01"
+    ],
+    "avatar": "A",
+    "joinedDate": "October 2026",
+    "role": "user"
+  }
+]

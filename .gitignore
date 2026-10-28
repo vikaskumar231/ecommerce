@@ -1,0 +1,29 @@
+# Python Bytecode and Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Local SQLite Database Files
+backend/data/*.db
+backend/data/*.db-wal
+backend/data/*.db-shm
+
+# Nested duplicate clone
+ecommerce/
+
+# IDE and OS
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Node & Build artifacts
+node_modules/
+dist/
+
+# Logs
+*.log
+

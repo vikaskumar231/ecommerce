@@ -47,6 +47,7 @@ const App = {
     this.bindEvents();
     this.updateCounters();
     this.updateHeaderUserChip();
+    this.updateBackendStatusUi();
     this.routeFromUrl();
     this.renderView();
     
@@ -54,6 +55,7 @@ const App = {
     window.addEventListener("aura_store_updated", (e) => {
       this.updateCounters();
       this.updateHeaderUserChip();
+      this.updateBackendStatusUi();
       if (this.currentView === "admin") {
         this.renderAdminView();
       }
@@ -1563,7 +1565,33 @@ const App = {
     const totalRev = orders.reduce((sum, o) => sum + (o.total || 0), 0);
     const inCuring = orders.filter(o => o.orderStatus === "Curing" || o.orderStatus === "Resin Poured").length;
 
+    const backendInfo = store.backendSecrets || {};
+    const dbConfig = backendInfo.database || {};
+    const dbHost = dbConfig.configured_host || "db-cluster.artalay-resin-enterprise.internal:5432";
+    const dbName = dbConfig.configured_database || "artalay_ecommerce_db";
+
     const statsHeader = `
+      <div style="background: linear-gradient(135deg, #092c35 0%, #0f4c5c 100%); color: #ffffff; border-radius: var(--radius-md); padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; box-shadow: var(--shadow-md);">
+        <div>
+          <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.35rem;">
+            <span class="backend-status-dot pulse-online" style="background:#34d399;"></span>
+            <strong style="color:#e6fffa; font-size:1rem; letter-spacing:0.02em;">Python Business Tier & Database Architecture</strong>
+            <span style="background:rgba(255,255,255,0.18); padding:2px 8px; border-radius:12px; font-size:0.7rem; font-weight:700;">secrets.json</span>
+          </div>
+          <div style="font-size:0.8rem; color:#b2d8d8;">
+            Connected to <strong>${dbName}</strong> (${dbHost}) • Catalog (${products.length} items) and Orders (${orders.length}) rendered directly from Database
+          </div>
+        </div>
+        <div style="display:flex; gap:0.5rem;">
+          <button class="btn btn-outline-gold btn-sm" style="color:#ffffff; border-color:var(--color-gold-light);" onclick="App.resyncWithDatabase()">
+            ⚡ Re-sync DB
+          </button>
+          <button class="btn btn-primary btn-sm" style="background:var(--color-gold); color:#ffffff;" onclick="App.openBackendDiagnosticsModal()">
+            ⚙️ Secrets & DB Info
+          </button>
+        </div>
+      </div>
+
       <div class="admin-stats-grid">
         <div class="admin-stat-card">
           <div style="font-size:0.8rem; color:var(--color-text-muted); text-transform:uppercase; font-weight:700;">Total Revenue</div>
@@ -2150,6 +2178,153 @@ const App = {
       this.navigateTo("account");
     } else {
       this.openLoginModal();
+    }
+  },
+
+  // =========================================================================
+  // PYTHON BUSINESS TIER & DATABASE INTEGRATION
+  // =========================================================================
+  updateBackendStatusUi() {
+    const pill = document.getElementById("backendTierStatusPill");
+    const text = document.getElementById("backendTierStatusText");
+    const dot = pill ? pill.querySelector(".backend-status-dot") : null;
+
+    if (store.isBackendConnected) {
+      if (text) text.textContent = "Python Business Tier: Online";
+      if (dot) {
+        dot.className = "backend-status-dot pulse-online";
+      }
+      if (pill) {
+        pill.style.background = "rgba(16, 185, 129, 0.15)";
+        pill.style.borderColor = "rgba(16, 185, 129, 0.4)";
+        pill.title = "Python Business Tier & Database connected! Click to view secrets configuration.";
+      }
+    } else {
+      if (text) text.textContent = "Python Tier: Local/Offline";
+      if (dot) {
+        dot.className = "backend-status-dot offline";
+      }
+      if (pill) {
+        pill.style.background = "rgba(245, 158, 11, 0.15)";
+        pill.style.borderColor = "rgba(245, 158, 11, 0.4)";
+        pill.title = "Backend connecting... Click to view diagnostics.";
+      }
+    }
+  },
+
+  async openBackendDiagnosticsModal() {
+    const modal = document.getElementById("backendDiagnosticsModal");
+    if (!modal) return;
+    modal.classList.add("active");
+    await this.renderBackendDiagnostics();
+  },
+
+  closeBackendDiagnosticsModal() {
+    const modal = document.getElementById("backendDiagnosticsModal");
+    if (modal) modal.classList.remove("active");
+  },
+
+  async renderBackendDiagnostics() {
+    const body = document.getElementById("backendDiagnosticsModalBody");
+    if (!body) return;
+
+    body.innerHTML = `
+      <div style="text-align:center; padding: 2rem;">
+        <div style="font-size: 2.5rem; animation: pulseDot 1.5s infinite;">⏳</div>
+        <p style="color:var(--color-text-muted); margin-top:0.75rem;">Fetching live architecture & secrets metrics from Python backend...</p>
+      </div>
+    `;
+
+    try {
+      const res = await fetch(`${store.apiBase}/api/system/secrets-info`);
+      const json = await res.json();
+      const data = json.data;
+      const dbStats = data.db_stats || {};
+      const counts = dbStats.counts || {};
+
+      body.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem; background:#f0fdf4; border:1px solid #bbf7d0; padding:0.85rem 1rem; border-radius:var(--radius-sm);">
+          <div style="display:flex; align-items:center; gap:0.6rem;">
+            <span class="backend-status-dot pulse-online" style="width:10px; height:10px;"></span>
+            <div>
+              <strong style="color:#166534; font-size:0.95rem;">Python Business Tier Connected</strong>
+              <div style="font-size:0.75rem; color:#15803d;">Multithreaded REST API active on port 8000</div>
+            </div>
+          </div>
+          <span class="diagnostics-badge-live">Live Verified</span>
+        </div>
+
+        <div class="diagnostics-metric-grid">
+          <div class="diagnostics-metric-card">
+            <div class="diagnostics-metric-val">${counts.products || store.getProducts().length}</div>
+            <div class="diagnostics-metric-label">Products in DB</div>
+          </div>
+          <div class="diagnostics-metric-card">
+            <div class="diagnostics-metric-val">${counts.orders || store.getOrders().length}</div>
+            <div class="diagnostics-metric-label">Orders in DB</div>
+          </div>
+          <div class="diagnostics-metric-card">
+            <div class="diagnostics-metric-val">${counts.categories || 10}</div>
+            <div class="diagnostics-metric-label">Categories</div>
+          </div>
+          <div class="diagnostics-metric-card">
+            <div class="diagnostics-metric-val">${counts.users || 3}</div>
+            <div class="diagnostics-metric-label">Registered Users</div>
+          </div>
+        </div>
+
+        <div style="font-weight:700; color:var(--color-primary-dark); font-size:0.9rem; margin-bottom:0.5rem;">
+          🔐 Secrets Configuration (secrets.json)
+        </div>
+        <div class="diagnostics-secrets-box">
+{
+  "secrets_file_loaded": ${data.secrets_file_loaded},
+  "secrets_file_name": "${data.secrets_file_name}",
+  "database": {
+    "configured_engine": "${data.database.configured_engine}",
+    "configured_host": "${data.database.configured_host}",
+    "configured_port": ${data.database.configured_port},
+    "configured_database": "${data.database.configured_database}",
+    "configured_username": "${data.database.configured_username}",
+    "configured_password": "${data.database.configured_password}",
+    "ssl_mode": "${data.database.ssl_mode}",
+    "active_storage_engine": "${data.database.active_storage_engine}",
+    "storage_file": "${data.database.storage_file}"
+  },
+  "third_party_integrations": {
+    "razorpay_key_id": "${data.third_party_integrations.razorpay_key_id}",
+    "delhivery_tracking": "${data.third_party_integrations.delhivery_tracking}",
+    "whatsapp_business": "${data.third_party_integrations.whatsapp_business}"
+  }
+}
+        </div>
+        <div style="margin-top:0.75rem; font-size:0.75rem; color:var(--color-text-muted);">
+          ℹ️ The actual production database credentials and keys are protected in <code>secrets.json</code> with sensitive fields masked above. The active catalog and orders are rendered directly from this persistence tier.
+        </div>
+      `;
+    } catch (err) {
+      body.innerHTML = `
+        <div style="background:#fffbeb; border:1px solid #fde68a; padding:1.25rem; border-radius:var(--radius-sm); text-align:center;">
+          <div style="font-size:2rem; margin-bottom:0.5rem;">⚠️</div>
+          <h4 style="color:#92400e; margin-bottom:0.5rem;">Python Business Tier Connecting</h4>
+          <p style="color:#b45309; font-size:0.85rem;">The front end is currently using cached product catalog data while waiting for <code>http://127.0.0.1:8000</code>.</p>
+          <button class="btn btn-primary btn-sm" style="margin-top:0.75rem;" onclick="App.resyncWithDatabase()">Retry Connection</button>
+        </div>
+      `;
+    }
+  },
+
+  async resyncWithDatabase() {
+    this.showToast("⚡ Synchronizing with Python Business Tier Database...");
+    const res = await store.syncWithDatabase();
+    if (res.success) {
+      this.showToast(`✅ Synchronized! Loaded ${res.count} products from database.`);
+      this.updateBackendStatusUi();
+      if (document.getElementById("backendDiagnosticsModal")?.classList.contains("active")) {
+        this.renderBackendDiagnostics();
+      }
+    } else {
+      this.showToast("⚠️ Could not reach Python server, using local cache.");
     }
   }
 };

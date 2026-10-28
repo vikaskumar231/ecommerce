@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="wallBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="teakWood" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="25%" stop-color="#92400e"/>
+      <stop offset="50%" stop-color="#b45309"/>
+      <stop offset="75%" stop-color="#92400e"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <radialGradient id="emeraldRiver" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="35%" stop-color="#059669"/>
+      <stop offset="75%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </radialGradient>
+    <linearGradient id="brass3D" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="30%" stop-color="#eab308"/>
+      <stop offset="70%" stop-color="#ca8a04"/>
+      <stop offset="100%" stop-color="#854d0e"/>
+    </linearGradient>
+    <filter id="woodShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="600" fill="url(#wallBg)"/>
+
+  <!-- Plaque Main Body (Teak Wood & Emerald River Resin) -->
+  <g filter="url(#woodShadow)">
+    <!-- Base Rectangle -->
+    <rect x="70" y="160" width="460" height="250" rx="16" fill="url(#teakWood)"/>
+
+    <!-- Wood Grain Strands (Left Section) -->
+    <path d="M70 210 Q140 215, 190 205" stroke="#451a03" stroke-width="2" fill="none" opacity="0.4"/>
+    <path d="M70 270 Q130 280, 200 265" stroke="#451a03" stroke-width="2.5" fill="none" opacity="0.4"/>
+    <path d="M70 340 Q150 330, 185 345" stroke="#451a03" stroke-width="2" fill="none" opacity="0.4"/>
+
+    <!-- Flowing Emerald River Resin Center Channel -->
+    <path d="M210 160 Q260 210, 230 280 T270 410 L370 410 Q320 330, 360 260 T320 160 Z" fill="url(#emeraldRiver)"/>
+    
+    <!-- 24K Gold Flakes in the Emerald River -->
+    <circle cx="270" cy="200" r="4.5" fill="#fef08a"/>
+    <circle cx="290" cy="235" r="3" fill="#fef08a"/>
+    <circle cx="280" cy="290" r="5" fill="#fef08a"/>
+    <circle cx="310" cy="330" r="4" fill="#fef08a"/>
+    <circle cx="330" cy="370" r="4.5" fill="#fef08a"/>
+    <circle cx="295" cy="390" r="3" fill="#fef08a"/>
+
+    <!-- Glass Specular River Highlights -->
+    <path d="M245 180 Q275 240, 260 300 T295 390" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.4"/>
+
+    <!-- Wood Grain Strands (Right Section) -->
+    <path d="M355 200 Q430 195, 530 210" stroke="#451a03" stroke-width="2" fill="none" opacity="0.4"/>
+    <path d="M375 280 Q450 290, 530 275" stroke="#451a03" stroke-width="2.5" fill="none" opacity="0.4"/>
+    <path d="M360 350 Q440 335, 530 350" stroke="#451a03" stroke-width="2" fill="none" opacity="0.4"/>
+
+    <!-- 4 Brushed Stainless Standoff Screws in corners -->
+    <circle cx="95" cy="185" r="7" fill="#cbd5e1" stroke="#64748b" stroke-width="2"/>
+    <circle cx="505" cy="185" r="7" fill="#cbd5e1" stroke="#64748b" stroke-width="2"/>
+    <circle cx="95" cy="385" r="7" fill="#cbd5e1" stroke="#64748b" stroke-width="2"/>
+    <circle cx="505" cy="385" r="7" fill="#cbd5e1" stroke="#64748b" stroke-width="2"/>
+
+    <!-- 3D Laser-Cut Raised Brass Lettering -->
+    <!-- Name Line 1 -->
+    <text x="300" y="270" font-family="'Cinzel', serif" font-size="34" font-weight="800" fill="url(#brass3D)" text-anchor="middle" letter-spacing="4">THE SHARMAS</text>
+    <!-- Subtitle Line 2 -->
+    <text x="300" y="315" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#fef08a" text-anchor="middle" letter-spacing="3">VILLA 42 • PALM MEADOWS</text>
+  </g>
+
+  <text x="300" y="475" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="700" fill="#0f172a" text-anchor="middle" letter-spacing="2">LUXURY TEAK & RESIN NAMEPLATE</text>
+  <text x="300" y="500" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" fill="#059669" text-anchor="middle" letter-spacing="3">WEATHERPROOF • 3D BRASS ACRYLIC LETTERS</text>
+</svg>

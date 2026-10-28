@@ -1,0 +1,2303 @@
+[
+  {
+    "id": "prod-ear-01",
+    "name": "Ocean Serenade Gold Flake Resin Drop Earrings",
+    "category": "earrings",
+    "categoryName": "Earrings",
+    "price": 699,
+    "originalPrice": 999,
+    "rating": 4.9,
+    "reviewCount": 42,
+    "badge": "Bestseller",
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": false,
+    "stock": 15,
+    "curingTimeDays": "2-3 business days",
+    "dimensions": "5.5 cm length, 1.8 cm width",
+    "weight": "8 grams (ultra light)",
+    "images": [
+      "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1611591475734-7a4c4e7fb2fb?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Experience coastal elegance with our Ocean Serenade drop earrings. Featuring genuine 24K gold foil flakes swirling through translucent sea-glass teal resin, finished with hypoallergenic surgical steel hooks.",
+    "features": [
+      "Non-toxic, UV-resistant crystal epoxy resin",
+      "Real 24K gold leaf inclusions",
+      "Hypoallergenic 316L surgical steel hooks (anti-tarnish)",
+      "Featherweight comfort for all-day wear",
+      "Waterproof and shatter-resistant"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Ocean Teal & Gold",
+          "hex": "#0a9396",
+          "extraPrice": 0
+        },
+        {
+          "name": "Blush Rose & Silver",
+          "hex": "#e5989b",
+          "extraPrice": 0
+        },
+        {
+          "name": "Emerald Green & Gold",
+          "hex": "#2d6a4f",
+          "extraPrice": 50
+        },
+        {
+          "name": "Amethyst Purple & Gold",
+          "hex": "#7209b7",
+          "extraPrice": 50
+        }
+      ],
+      "foilTypes": [
+        "24K Gold Flakes",
+        "Sterling Silver Flakes",
+        "Rose Gold Shimmer",
+        "None"
+      ],
+      "hookTypes": [
+        "Surgical Steel Hooks",
+        "18K Gold Plated Studs (+₹99)",
+        "Clip-on (Non-pierced)"
+      ],
+      "sizes": [
+        "Standard Drop (5.5cm)",
+        "Mini Dainty Drop (4.0cm)"
+      ],
+      "allowCustomText": false
+    }
+  },
+  {
+    "id": "prod-ear-02",
+    "name": "Real Pressed Hydrangea Blossom Dangle Studs",
+    "category": "earrings",
+    "categoryName": "Earrings",
+    "price": 799,
+    "originalPrice": 1199,
+    "rating": 4.8,
+    "reviewCount": 38,
+    "badge": "New Arrival",
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNew": true,
+    "isFestival": false,
+    "stock": 12,
+    "curingTimeDays": "3 business days",
+    "dimensions": "4.0 cm x 2.2 cm",
+    "weight": "6 grams",
+    "images": [
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Each petal is delicately harvested, naturally pressed, and eternally sealed in optical-grade clear resin with a touch of holographic fairy dust.",
+    "features": [
+      "Hand-picked and preserved natural hydrangea petals",
+      "Crystal clear diamond-gloss resin",
+      "Nickel-free and lead-free posts",
+      "Comes in a luxury velvet jewelry keepsake pouch"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Cornflower Blue",
+          "hex": "#64dfdf",
+          "extraPrice": 0
+        },
+        {
+          "name": "Sakura Pink",
+          "hex": "#ffb5a7",
+          "extraPrice": 0
+        },
+        {
+          "name": "Pure White & Gold",
+          "hex": "#f8edeb",
+          "extraPrice": 0
+        },
+        {
+          "name": "Lilac Violet",
+          "hex": "#c77dff",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "Fine Gold Dust",
+        "Silver Shimmer",
+        "No Foil"
+      ],
+      "hookTypes": [
+        "Stud Backing",
+        "French Wire Hooks"
+      ],
+      "sizes": [
+        "Standard",
+        "Dainty"
+      ],
+      "allowCustomText": false
+    }
+  },
+  {
+    "id": "prod-ear-03",
+    "name": "Emerald Geode Raw Crystal Rimmed Earrings",
+    "category": "earrings",
+    "categoryName": "Earrings",
+    "price": 849,
+    "originalPrice": 1299,
+    "rating": 5.0,
+    "reviewCount": 19,
+    "badge": "Artisan Pick",
+    "isFeatured": false,
+    "isBestseller": false,
+    "isNew": true,
+    "isFestival": false,
+    "stock": 9,
+    "curingTimeDays": "3-4 business days",
+    "dimensions": "4.8 cm length",
+    "weight": "9 grams",
+    "images": [
+      "https://images.unsplash.com/photo-1611591475734-7a4c4e7fb2fb?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Inspired by raw geode geodes, these statement earrings feature an intricate crystalline core surrounded by deep emerald resin and hand-gilded liquid gold edges.",
+    "features": [
+      "Simulated crushed quartz crystal inclusions",
+      "Hand-painted gilded edge finish",
+      "Anti-allergenic titanium posts",
+      "Eye-catching light-refracting facets"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Deep Emerald",
+          "hex": "#1b4332",
+          "extraPrice": 0
+        },
+        {
+          "name": "Sapphire Midnight",
+          "hex": "#1d3557",
+          "extraPrice": 0
+        },
+        {
+          "name": "Ruby Sunset",
+          "hex": "#9d0208",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "24K Liquid Gold Edge",
+        "Sterling Silver Edge"
+      ],
+      "hookTypes": [
+        "Drop Hooks",
+        "Push Back Studs"
+      ],
+      "sizes": [
+        "Statement (4.8cm)",
+        "Petite (3.2cm)"
+      ],
+      "allowCustomText": false
+    }
+  },
+  {
+    "id": "prod-ear-04",
+    "name": "Celestial Moon & Star Shimmer Hoops",
+    "category": "earrings",
+    "categoryName": "Earrings",
+    "price": 599,
+    "originalPrice": 899,
+    "rating": 4.7,
+    "reviewCount": 26,
+    "badge": "Trending",
+    "isFeatured": false,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": false,
+    "stock": 20,
+    "curingTimeDays": "2 days",
+    "dimensions": "3.5 cm diameter hoops",
+    "weight": "5 grams",
+    "images": [
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Dainty resin celestial charms embedded with luminescent micro-glitters and miniature star sequins, suspended from 14K gold plated huggie hoops.",
+    "features": [
+      "Glow subtle luminescence in low light",
+      "Easy latch-back huggie hoops",
+      "Ultra comfortable for everyday wear"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Midnight Cosmic Black",
+          "hex": "#141414",
+          "extraPrice": 0
+        },
+        {
+          "name": "Opalescent Cloud White",
+          "hex": "#e9ecef",
+          "extraPrice": 0
+        },
+        {
+          "name": "Pastel Lavender",
+          "hex": "#b8b8ff",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "Micro Star Glitters",
+        "Silver Dust",
+        "Gold Moon Sequins"
+      ],
+      "hookTypes": [
+        "Gold Huggie Hoops",
+        "Silver Huggie Hoops"
+      ],
+      "sizes": [
+        "Standard Hoop (3.5cm)"
+      ],
+      "allowCustomText": false
+    }
+  },
+  {
+    "id": "prod-clk-01",
+    "name": "Royal Sapphire Geode Resin Wall Clock with Quartz",
+    "category": "wall-clock",
+    "categoryName": "Wall Clock",
+    "price": 3499,
+    "originalPrice": 4999,
+    "rating": 5.0,
+    "reviewCount": 64,
+    "badge": "Bestseller",
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": true,
+    "stock": 8,
+    "curingTimeDays": "5-6 business days",
+    "dimensions": "14 inches diameter (35 cm)",
+    "weight": "1.8 kg",
+    "images": [
+      "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "A show-stopping luxury centerpiece for your living room or office. Poured across multiple days with 3D layers of royal blue, metallic copper, and turquoise, embedded with real raw quartz crystal points and Roman dial numerals.",
+    "features": [
+      "Silent sweep quartz clock movement (No ticking noise!)",
+      "Real raw Brazilian quartz crystals embedded in resin fissure",
+      "3-layer resin depth technique for authentic 3D fluid motion",
+      "Hand-applied 3D Roman or Arabic metal numerals",
+      "Heavy-duty sawtooth wall hanger pre-installed",
+      "Runs on 1 AA battery (included)"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Royal Sapphire & Gold",
+          "hex": "#1e3a8a",
+          "extraPrice": 0
+        },
+        {
+          "name": "Emerald & Champagne Gold",
+          "hex": "#064e3b",
+          "extraPrice": 0
+        },
+        {
+          "name": "White Marble & Rose Gold",
+          "hex": "#f3f4f6",
+          "extraPrice": 200
+        },
+        {
+          "name": "Onyx Black & Metallic Copper",
+          "hex": "#18181b",
+          "extraPrice": 200
+        }
+      ],
+      "foilTypes": [
+        "24K Liquid Gold Rim",
+        "Rose Gold Rim",
+        "Silver Leaf Veins"
+      ],
+      "sizes": [
+        "12 Inches (Compact)",
+        "14 Inches (Standard)",
+        "16 Inches (+₹600)",
+        "18 Inches Luxury (+₹1100)"
+      ],
+      "dialTypes": [
+        "Roman Numerals (Gold)",
+        "Modern Minimal Dashes",
+        "Classic Arabic Numbers"
+      ],
+      "handsColor": [
+        "Polished Gold Hands",
+        "Matte Black Hands",
+        "Silver Hands"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Family Name / Established Year (e.g. The Sharmas, Est. 2021)"
+    }
+  },
+  {
+    "id": "prod-clk-02",
+    "name": "Bondi Shore Ocean Wave Live-Edge Resin Wall Clock",
+    "category": "wall-clock",
+    "categoryName": "Wall Clock",
+    "price": 2999,
+    "originalPrice": 4299,
+    "rating": 4.9,
+    "reviewCount": 31,
+    "badge": "Popular",
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNew": true,
+    "isFestival": false,
+    "stock": 6,
+    "curingTimeDays": "5 days",
+    "dimensions": "13 inches diameter",
+    "weight": "1.4 kg",
+    "images": [
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Bring the tranquil energy of coastal tides into your sanctuary. Handcrafted with realistic white resin wave lacing flowing over solid steam-treated natural mango wood.",
+    "features": [
+      "Hyper-realistic lacing cell waves created with blowtorch technique",
+      "Solid sustainable mango wood substrate",
+      "Silent quartz clock mechanism with 1-year replacement warranty",
+      "Triple heat-resistant clear topcoat"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Tropical Turquoise Wave",
+          "hex": "#00b4d8",
+          "extraPrice": 0
+        },
+        {
+          "name": "Deep Pacific Navy",
+          "hex": "#03045e",
+          "extraPrice": 0
+        },
+        {
+          "name": "Caribbean Aqua",
+          "hex": "#48cae4",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "Real Golden Sand Beach",
+        "Mother of Pearl Crushed Shells"
+      ],
+      "sizes": [
+        "12 Inches",
+        "14 Inches (+₹500)",
+        "16 Inches (+₹900)"
+      ],
+      "dialTypes": [
+        "Minimalist Dots",
+        "Roman Numerals",
+        "Bare Beach Face (No Numbers)"
+      ],
+      "handsColor": [
+        "White Driftwood Hands",
+        "Brass Gold Hands"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Short Message / Coordinates (e.g. Goa 15.2993° N)"
+    }
+  },
+  {
+    "id": "prod-clk-03",
+    "name": "Gilded Marble Luxury Resin Wall Clock 15-Inch",
+    "category": "wall-clock",
+    "categoryName": "Wall Clock",
+    "price": 3199,
+    "originalPrice": 4500,
+    "rating": 4.8,
+    "reviewCount": 22,
+    "badge": "Modern Lux",
+    "isFeatured": false,
+    "isBestseller": false,
+    "isNew": true,
+    "isFestival": true,
+    "stock": 10,
+    "curingTimeDays": "4-5 business days",
+    "dimensions": "15 inches diameter",
+    "weight": "1.6 kg",
+    "images": [
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Statuesque Calacatta marble effect poured with epoxy resin and interwoven with metallic 24K gold foil veins. Perfect for contemporary interiors.",
+    "features": [
+      "Carrara marble imitation with pearlescent mica shimmer",
+      "Silent quartz movement",
+      "Laser-cut gold mirrored acrylic hour markers"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "White Marble & Gold",
+          "hex": "#f8f9fa",
+          "extraPrice": 0
+        },
+        {
+          "name": "Black Marquina & Gold",
+          "hex": "#212529",
+          "extraPrice": 0
+        },
+        {
+          "name": "Grey Pearl & Silver",
+          "hex": "#ced4da",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "24K Gold Veins",
+        "Rose Gold Shimmer",
+        "Silver Leaf"
+      ],
+      "sizes": [
+        "12 Inches",
+        "15 Inches Standard",
+        "18 Inches Large (+₹800)"
+      ],
+      "dialTypes": [
+        "Gold Mirror Roman Numerals",
+        "Slender Line Markers",
+        "No Markers"
+      ],
+      "handsColor": [
+        "Brushed Gold Hands",
+        "Gloss Black Hands"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Custom Name Monogram (e.g. Verma Residence)"
+    }
+  },
+  {
+    "id": "prod-clk-04",
+    "name": "Festive Peacock Feather Resin Wall Clock with Bell Tassels",
+    "category": "wall-clock",
+    "categoryName": "Wall Clock",
+    "price": 3699,
+    "originalPrice": 5299,
+    "rating": 5.0,
+    "reviewCount": 45,
+    "badge": "Festival Spl",
+    "isFeatured": false,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": true,
+    "stock": 7,
+    "curingTimeDays": "5 days",
+    "dimensions": "14 inches diameter",
+    "weight": "1.7 kg",
+    "images": [
+      "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Celebrate Indian heritage with this majestic peacock feather-themed resin wall clock. Accented with metallic emerald, sapphire, and radiant gold shimmer.",
+    "features": [
+      "Inspired by the Indian national bird & Radha Krishna motifs",
+      "Includes hanging ornamental brass ghungroo tassels at base",
+      "Silent quartz movement"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Peacock Emerald & Royal Blue",
+          "hex": "#0f4c5c",
+          "extraPrice": 0
+        },
+        {
+          "name": "Lotus Pink & Gold",
+          "hex": "#e76f51",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "24K Gold Flakes",
+        "Copper Shimmer"
+      ],
+      "sizes": [
+        "14 Inches Standard",
+        "16 Inches (+₹700)"
+      ],
+      "dialTypes": [
+        "Devanagari Sanskrit Numerals",
+        "Traditional Roman Numerals"
+      ],
+      "handsColor": [
+        "Antique Gold Hands"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Shree / Om / Family Name"
+    }
+  },
+  {
+    "id": "prod-bm-01",
+    "name": "Enchanted Wildflower Botanical Resin Bookmark with Tassel",
+    "category": "book-mark",
+    "categoryName": "Book Mark",
+    "price": 249,
+    "originalPrice": 399,
+    "rating": 4.9,
+    "reviewCount": 88,
+    "badge": "Bestseller",
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": false,
+    "stock": 35,
+    "curingTimeDays": "2 days",
+    "dimensions": "14 cm x 2.8 cm x 0.25 cm",
+    "weight": "18 grams",
+    "images": [
+      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Every reader's dream companion. Genuine dried meadow flowers, baby's breath, and fluttering 24K gold foil eternally preserved in glass-like optical resin. Finished with a silky handmade tassel.",
+    "features": [
+      "Ultra-slim 2.5mm profile doesn't warp or damage book spines",
+      "Hand-collected dried botanicals and ferns",
+      "Smooth polished rounded edges to prevent snagging pages",
+      "Comes in giftable kraft presentation card"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Sunny Meadow Yellow",
+          "hex": "#f4a261",
+          "extraPrice": 0
+        },
+        {
+          "name": "Rose Garden Pink",
+          "hex": "#e76f51",
+          "extraPrice": 0
+        },
+        {
+          "name": "Forget-Me-Not Blue",
+          "hex": "#2a9d8f",
+          "extraPrice": 0
+        },
+        {
+          "name": "Lavender Fields",
+          "hex": "#9b5de5",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "24K Gold Leaf",
+        "Silver Flakes",
+        "Rose Gold Leaf",
+        "No Foil"
+      ],
+      "tasselColor": [
+        "Champagne Gold Tassel",
+        "Wine Red Tassel",
+        "Emerald Green Tassel",
+        "Dusty Pink Tassel"
+      ],
+      "sizes": [
+        "Standard (14cm x 2.8cm)",
+        "Slim Pocket (10cm x 2.2cm)"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Name / Inspiring Quote (e.g. 'Just one more chapter')"
+    }
+  },
+  {
+    "id": "prod-bm-02",
+    "name": "Ocean Wave Surf Resin Bookmark with Real Sand & Shells",
+    "category": "book-mark",
+    "categoryName": "Book Mark",
+    "price": 279,
+    "originalPrice": 429,
+    "rating": 4.8,
+    "reviewCount": 52,
+    "badge": "Trending",
+    "isFeatured": false,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": false,
+    "stock": 28,
+    "curingTimeDays": "2 days",
+    "dimensions": "14 cm x 3 cm",
+    "weight": "20 grams",
+    "images": [
+      "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "A miniature piece of the sea for your reading moments. Handcrafted with real white foaming ocean surf, sparkling beach sand, and miniature crushed seashells.",
+    "features": [
+      "Real sand from coastal beaches",
+      "Laced foam wave effect",
+      "Silky turquoise and silver threaded tassel"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Deep Ocean Blue",
+          "hex": "#0077b6",
+          "extraPrice": 0
+        },
+        {
+          "name": "Emerald Seafoam",
+          "hex": "#52b788",
+          "extraPrice": 0
+        },
+        {
+          "name": "Sunset Orange Waves",
+          "hex": "#f3722c",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "Gold Leaf Accents",
+        "Silver Foam Glitter"
+      ],
+      "tasselColor": [
+        "Aqua Blue Tassel",
+        "Ivory White Tassel"
+      ],
+      "sizes": [
+        "Standard (14cm)"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Reader's Name (e.g. Priya)"
+    }
+  },
+  {
+    "id": "prod-bm-03",
+    "name": "Vintage 24K Gold Leaf & Rose Petal Herbarium Bookmark",
+    "category": "book-mark",
+    "categoryName": "Book Mark",
+    "price": 299,
+    "originalPrice": 449,
+    "rating": 5.0,
+    "reviewCount": 41,
+    "badge": "New Arrival",
+    "isFeatured": false,
+    "isBestseller": false,
+    "isNew": true,
+    "isFestival": false,
+    "stock": 22,
+    "curingTimeDays": "2-3 business days",
+    "dimensions": "14.5 cm x 3 cm",
+    "weight": "18 grams",
+    "images": [
+      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Deep burgundy preserved rose petals dancing alongside suspended 24k gold leaf foil flakes in transparent museum-grade resin.",
+    "features": [
+      "Natural fragrant rose petals harvested at peak bloom",
+      "Gold embossed lettering option",
+      "Wine-hued silk tassel with brass bead"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Deep Crimson Rose",
+          "hex": "#9b2226",
+          "extraPrice": 0
+        },
+        {
+          "name": "Peach Blossom",
+          "hex": "#f4a261",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "Heavy 24K Gold Leaf",
+        "Rose Gold Foil"
+      ],
+      "tasselColor": [
+        "Burgundy Tassel",
+        "Gold Tassel"
+      ],
+      "sizes": [
+        "Standard"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Custom Name or Initials"
+    }
+  },
+  {
+    "id": "prod-bm-04",
+    "name": "Personalized Initial Monogram Resin Bookmark Gift Set",
+    "category": "book-mark",
+    "categoryName": "Book Mark",
+    "price": 349,
+    "originalPrice": 499,
+    "rating": 4.9,
+    "reviewCount": 67,
+    "badge": "Gift Choice",
+    "isFeatured": false,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": true,
+    "stock": 30,
+    "curingTimeDays": "2 days",
+    "dimensions": "14 cm x 3 cm",
+    "weight": "20 grams",
+    "images": [
+      "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "The ultimate thoughtful gift for book lovers, teachers, and book clubs. Embedded with their initial letter in metallic gold typography, surrounded by real baby's breath.",
+    "features": [
+      "Custom laser-cut metallic monogram inside resin",
+      "Choice of tassel color",
+      "Packed in foil-stamped gift box with custom message card"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Lavender Lilac",
+          "hex": "#b5838d",
+          "extraPrice": 0
+        },
+        {
+          "name": "Sage Green & White",
+          "hex": "#84a59d",
+          "extraPrice": 0
+        },
+        {
+          "name": "Midnight Navy",
+          "hex": "#1d3557",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "Gold Flakes",
+        "Silver Flakes"
+      ],
+      "tasselColor": [
+        "Matching Pastel Tassel",
+        "Metallic Gold Tassel"
+      ],
+      "sizes": [
+        "Standard"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Enter Monogram Letter & Full Name (e.g. 'A - Ananya')"
+    }
+  },
+  {
+    "id": "prod-kc-01",
+    "name": "Custom Initial Alphabet Floral Resin Keychain with Tassel",
+    "category": "key-chains",
+    "categoryName": "Key Chains",
+    "price": 199,
+    "originalPrice": 299,
+    "rating": 4.9,
+    "reviewCount": 142,
+    "badge": "Bestseller",
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": false,
+    "stock": 50,
+    "curingTimeDays": "2 days",
+    "dimensions": "4.5 cm x 4 cm x 0.8 cm",
+    "weight": "22 grams",
+    "images": [
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Our viral alphabet keychain! Pick any letter from A to Z, customized with your favorite pigment blend, real dried pressed flowers, 24K gold foil flakes, and a matching suede leather tassel with gold swivel keyring.",
+    "features": [
+      "Any letter from A to Z or numbers 0-9",
+      "Real dried baby's breath or pressed petals",
+      "Heavy duty anti-rust swivel lobster clasp & split ring",
+      "Reinforced screw eye embedded deep inside the resin core"
+    ],
+    "customizationOptions": {
+      "alphabetChoice": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "Heart",
+        "&"
+      ],
+      "colorPalette": [
+        {
+          "name": "Cotton Candy Pink & Gold",
+          "hex": "#ffafcc",
+          "extraPrice": 0
+        },
+        {
+          "name": "Ocean Breeze Teal & Gold",
+          "hex": "#a2d2ff",
+          "extraPrice": 0
+        },
+        {
+          "name": "Emerald Glitz",
+          "hex": "#2a9d8f",
+          "extraPrice": 0
+        },
+        {
+          "name": "Royal Purple & Silver",
+          "hex": "#9d4edd",
+          "extraPrice": 0
+        },
+        {
+          "name": "Classic Clear & 24K Gold",
+          "hex": "#ffffff",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "24K Gold Flakes",
+        "Rose Gold Flakes",
+        "Silver Flakes"
+      ],
+      "hardwareColor": [
+        "Gold Hardware",
+        "Silver Hardware",
+        "Rose Gold Hardware"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Mini Name Tag Engraving (e.g. 'Pooja')"
+    }
+  },
+  {
+    "id": "prod-kc-02",
+    "name": "Personalized Scannable Spotify Code Resin Keychain",
+    "category": "key-chains",
+    "categoryName": "Key Chains",
+    "price": 299,
+    "originalPrice": 449,
+    "rating": 5.0,
+    "reviewCount": 94,
+    "badge": "Viral Trend",
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": false,
+    "stock": 40,
+    "curingTimeDays": "2 days",
+    "dimensions": "6 cm x 1.8 cm x 0.5 cm",
+    "weight": "20 grams",
+    "images": [
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Carry your special song everywhere! Scannable via the Spotify app camera to play your special track instantly. Made with glossy epoxy resin and custom song title + artist text.",
+    "features": [
+      "100% scannable Spotify wave code guaranteed",
+      "Reverse side can have custom date or couple names",
+      "Scratch-resistant clear coat finish"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Jet Black with White Code",
+          "hex": "#121212",
+          "extraPrice": 0
+        },
+        {
+          "name": "Clear with Gold Code & Flakes",
+          "hex": "#d4af37",
+          "extraPrice": 0
+        },
+        {
+          "name": "Pastel Pink Shimmer",
+          "hex": "#fcd5ce",
+          "extraPrice": 0
+        },
+        {
+          "name": "Smoky Translucent Teal",
+          "hex": "#0077b6",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "Gold Foil Border",
+        "Silver Dust",
+        "None"
+      ],
+      "hardwareColor": [
+        "Gold Keyring",
+        "Silver Keyring"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Song Title & Artist (e.g. Kesariya - Arijit Singh) OR Spotify Link"
+    }
+  },
+  {
+    "id": "prod-kc-03",
+    "name": "Cherished Pet Memorial & Photo Resin Keychain",
+    "category": "key-chains",
+    "categoryName": "Key Chains",
+    "price": 349,
+    "originalPrice": 499,
+    "rating": 4.9,
+    "reviewCount": 56,
+    "badge": "Personalized",
+    "isFeatured": false,
+    "isBestseller": false,
+    "isNew": true,
+    "isFestival": false,
+    "stock": 25,
+    "curingTimeDays": "3 days",
+    "dimensions": "4.5 cm circle",
+    "weight": "24 grams",
+    "images": [
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Preserve a beloved photo of your dog, cat, or loved one sealed permanently under waterproof resin crystal. Backing can include paw print, gold foil, and phone number in case of lost keys.",
+    "features": [
+      "Archival waterproof photo print sealed inside",
+      "Dual-sided: photo on front, phone number/name on back",
+      "Includes mini bone/paw charm"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Warm Gold Foil Halo",
+          "hex": "#d4af37",
+          "extraPrice": 0
+        },
+        {
+          "name": "Silver Moonlight Halo",
+          "hex": "#e0e1dd",
+          "extraPrice": 0
+        },
+        {
+          "name": "Rose Petals Border",
+          "hex": "#e56b6f",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "Gold Flakes",
+        "Silver Flakes"
+      ],
+      "hardwareColor": [
+        "Gold Keyring",
+        "Silver Keyring"
+      ],
+      "allowCustomText": true,
+      "allowPhotoUpload": true,
+      "textPlaceholder": "Pet Name & Emergency Phone Number"
+    }
+  },
+  {
+    "id": "prod-kc-04",
+    "name": "Interlocking Couple Heart Magnetic Resin Keyrings (Set of 2)",
+    "category": "key-chains",
+    "categoryName": "Key Chains",
+    "price": 399,
+    "originalPrice": 599,
+    "rating": 4.8,
+    "reviewCount": 47,
+    "badge": "Gift Choice",
+    "isFeatured": false,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": false,
+    "stock": 30,
+    "curingTimeDays": "2-3 business days",
+    "dimensions": "Combined 5 cm heart",
+    "weight": "35 grams pair",
+    "images": [
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Two halves of a heart that click together with embedded neodymium magnets when brought close! Handcrafted with contrasting resin swirls and personalized anniversary date.",
+    "features": [
+      "Neodymium magnet embedded inside both halves",
+      "Contrasting his & hers colors or matching pairs",
+      "Gift boxed ready for gifting"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Blush Pink & Midnight Blue",
+          "hex": "#4a4e69",
+          "extraPrice": 0
+        },
+        {
+          "name": "Emerald Green & Pearl White",
+          "hex": "#2d6a4f",
+          "extraPrice": 0
+        },
+        {
+          "name": "Black & 24K Gold Flakes",
+          "hex": "#14213d",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "Gold Leaf",
+        "Silver Leaf"
+      ],
+      "hardwareColor": [
+        "Gold Pair",
+        "Silver Pair"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Two Names & Date (e.g. Rohan & Siya | 14.02.24)"
+    }
+  },
+  {
+    "id": "prod-trn-01",
+    "name": "Shubh Bandhan Handcrafted Resin Lotus & Marigold Festive Toran",
+    "category": "toran",
+    "categoryName": "Toran",
+    "price": 1899,
+    "originalPrice": 2699,
+    "rating": 5.0,
+    "reviewCount": 53,
+    "badge": "Festival Spl",
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": true,
+    "stock": 12,
+    "curingTimeDays": "4 business days",
+    "dimensions": "38 inches standard door width (adjustable to 42\")",
+    "weight": "650 grams",
+    "images": [
+      "https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1609137144827-6f81a7428807?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Welcome prosperity and divine blessings into your home. This luxurious entrance toran features 7 hand-poured 3D resin blooming lotuses, real preserved marigold petals, gold-dipped kundan embellishments, and melodic brass bells that chime with every breeze.",
+    "features": [
+      "Waterproof and washable unlike fresh flower torans that wilt in 2 days",
+      "Evergreen durability - reuse every Diwali, Navratri, Pooja, and housewarming for years",
+      "7 hand-cast resin sacred lotus plaques with gold foil veins",
+      "Strung on high-strength braided gold thread with hanging loop rings",
+      "Tinkle sound brass bells (ghungroo) at every drop"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Festive Marigold Yellow & Orange",
+          "hex": "#f77f00",
+          "extraPrice": 0
+        },
+        {
+          "name": "Divine Ruby Red & Gold",
+          "hex": "#d62828",
+          "extraPrice": 0
+        },
+        {
+          "name": "Royal Peacock Blue & Emerald",
+          "hex": "#003049",
+          "extraPrice": 150
+        }
+      ],
+      "sizes": [
+        "36 Inches (Standard Door)",
+        "38 Inches (Wide Door)",
+        "42 Inches Double Door (+₹300)"
+      ],
+      "foilTypes": [
+        "Heavy 24K Gold Flake Edges",
+        "Kundan Gem Highlights"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Custom blessings or family name on center plaque (optional)"
+    }
+  },
+  {
+    "id": "prod-trn-02",
+    "name": "Royal Pearl & Swastik Resin Bandhanwar with Brass Bells",
+    "category": "toran",
+    "categoryName": "Toran",
+    "price": 1599,
+    "originalPrice": 2299,
+    "rating": 4.8,
+    "reviewCount": 37,
+    "badge": "New Arrival",
+    "isFeatured": false,
+    "isBestseller": false,
+    "isNew": true,
+    "isFestival": true,
+    "stock": 15,
+    "curingTimeDays": "3-4 days",
+    "dimensions": "36 inches length",
+    "weight": "580 grams",
+    "images": [
+      "https://images.unsplash.com/photo-1609137144827-6f81a7428807?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Ornate traditional door valance with alternating Swastik and Om symbols encased in glossy teardrop resin charms, strung with multi-strand faux freshwater pearls.",
+    "features": [
+      "Traditional Vaastu-compliant auspicious motifs",
+      "Resin medallions with 3D embossed metallic iconography",
+      "Easy dual-hook installation"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Auspicious Sindoor Red",
+          "hex": "#b7094c",
+          "extraPrice": 0
+        },
+        {
+          "name": "Golden Haldi Yellow",
+          "hex": "#ffb703",
+          "extraPrice": 0
+        }
+      ],
+      "sizes": [
+        "36 Inches",
+        "40 Inches (+₹200)"
+      ],
+      "foilTypes": [
+        "24K Gold Leaf",
+        "Copper Foil"
+      ],
+      "allowCustomText": false
+    }
+  },
+  {
+    "id": "prod-trn-03",
+    "name": "Floral Meadow Modern Pastel Resin Entrance Toran",
+    "category": "toran",
+    "categoryName": "Toran",
+    "price": 1749,
+    "originalPrice": 2499,
+    "rating": 4.9,
+    "reviewCount": 29,
+    "badge": "Modern Vibe",
+    "isFeatured": false,
+    "isBestseller": false,
+    "isNew": true,
+    "isFestival": false,
+    "stock": 10,
+    "curingTimeDays": "4 days",
+    "dimensions": "38 inches length",
+    "weight": "500 grams",
+    "images": [
+      "https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1609137144827-6f81a7428807?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "A contemporary aesthetic take on the classic toran. Features preserved real botanical daisies, hydrangeas, and eucalyptus leaves in geometric hexagonal resin tiles with macrame accents.",
+    "features": [
+      "Boho modern fusion for apartment doorways",
+      "Real botanical preservation",
+      "Cotton macrame braided cord"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Blush Peach & Sage",
+          "hex": "#e5989b",
+          "extraPrice": 0
+        },
+        {
+          "name": "Lavender & Ivory",
+          "hex": "#b8b8ff",
+          "extraPrice": 0
+        }
+      ],
+      "sizes": [
+        "36 Inches",
+        "38 Inches",
+        "42 Inches (+₹250)"
+      ],
+      "foilTypes": [
+        "Fine Gold Flakes",
+        "Rose Gold Dust"
+      ],
+      "allowCustomText": false
+    }
+  },
+  {
+    "id": "prod-trn-04",
+    "name": "Peacock Elegance Green & Blue Resin Festive Toran",
+    "category": "toran",
+    "categoryName": "Toran",
+    "price": 1999,
+    "originalPrice": 2899,
+    "rating": 5.0,
+    "reviewCount": 39,
+    "badge": "Festival Spl",
+    "isFeatured": false,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": true,
+    "stock": 8,
+    "curingTimeDays": "4-5 days",
+    "dimensions": "40 inches length",
+    "weight": "700 grams",
+    "images": [
+      "https://images.unsplash.com/photo-1609137144827-6f81a7428807?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Inspired by temple architecture, featuring Mayur (peacock) resin figures adorned with emerald resin droplets and golden pearl tassels.",
+    "features": [
+      "Heirloom festive quality",
+      "Metallic mica colors with deep gloss luster",
+      "Heavy brass jhumki drops"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Mayur Royal Blue & Emerald",
+          "hex": "#0f4c5c",
+          "extraPrice": 0
+        }
+      ],
+      "sizes": [
+        "38 Inches",
+        "42 Inches (+₹300)"
+      ],
+      "foilTypes": [
+        "24K Gold Leaf",
+        "Silver Trim"
+      ],
+      "allowCustomText": false
+    }
+  },
+  {
+    "id": "prod-sl-01",
+    "name": "Sindoor Red & Pearl Beaded Shubh Labh Resin Discs (Shrinathji Edition)",
+    "category": "shubh-labh",
+    "categoryName": "Shubh Labh",
+    "price": 799,
+    "originalPrice": 1199,
+    "rating": 4.9,
+    "reviewCount": 89,
+    "badge": "Bestseller",
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": true,
+    "stock": 30,
+    "curingTimeDays": "3 days",
+    "dimensions": "Each piece 5.5 inches diameter (pair)",
+    "weight": "320 grams (pair)",
+    "images": [
+      "images/shubh-labh/ShubhLabh1_focus.jpg",
+      "images/shubh-labh/ShubhLabh1.jpg",
+      "images/shubh-labh/ShubhLabhMixed2.jpg"
+    ],
+    "description": "Adorn your entrance or pooja mandir with sacred Shrinathji calligraphy and blessings. Handcrafted circular resin discs in auspicious Sindoor Crimson red, embossed with gold Devanagari 'शुभ' and 'लाभ', bordered with golden zari thread and surrounded by a halo of alternating white pearls and gold beads.",
+    "features": [
+      "Set of 2 matching circular door hangings (Shubh + Labh)",
+      "Traditional Shrinathji Krishna face illustration with white floral garland",
+      "Rich golden zari thread wrapped inner frame",
+      "Double-halo perimeter of faux pearls and golden brass beads",
+      "Includes heavy-duty 3M wall mounting adhesive and hanging loops"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Sindoor Crimson Red",
+          "hex": "#9d0208",
+          "extraPrice": 0
+        },
+        {
+          "name": "Sacred Saffron Orange",
+          "hex": "#e85d04",
+          "extraPrice": 0
+        },
+        {
+          "name": "Temple Maroon",
+          "hex": "#6a040f",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "24K Liquid Gold Foil",
+        "Rose Gold Shimmer"
+      ],
+      "sizes": [
+        "Standard 5.5-inch Pair",
+        "Grand 7.5-inch Pair (+₹350)"
+      ],
+      "hangingStyle": [
+        "Double-sided 3M Wall Adhesive",
+        "Brass Hanging Ring",
+        "Golden Beaded Loop"
+      ],
+      "allowCustomText": false
+    }
+  },
+  {
+    "id": "prod-sl-02",
+    "name": "Terracotta & Azure Blue Lotus Jharokha Shubh Labh Temple Arches",
+    "category": "shubh-labh",
+    "categoryName": "Shubh Labh",
+    "price": 949,
+    "originalPrice": 1399,
+    "rating": 5.0,
+    "reviewCount": 54,
+    "badge": "Artisan Pick",
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNew": true,
+    "isFestival": true,
+    "stock": 22,
+    "curingTimeDays": "3 business days",
+    "dimensions": "6.5 inches height x 5.2 inches width (each arch)",
+    "weight": "380 grams (pair)",
+    "images": [
+      "images/shubh-labh/ShubhLabh3_focus.jpg",
+      "images/shubh-labh/ShubhLabh3.jpg",
+      "images/shubh-labh/ShubhLabhMixed2.jpg"
+    ],
+    "description": "Inspired by traditional Rajasthani palace temple architecture (Jharokha). Features terracotta red contoured arch frames encasing sparkling azure blue resin with hand-painted blooming pink lotuses (Kamal), 3D embossed red and gold 'शुभ लाभ' lettering, crystal flower clusters, and joyful multicolored bead tassels with dangling pearl drops.",
+    "features": [
+      "Ornate Rajasthani Jharokha temple arch silhouettes",
+      "High-gloss azure blue resin with blooming pink lotus motifs",
+      "3D embossed Sanskrit calligraphy 'शुभ' on one arch and 'लाभ' on the other",
+      "Rhinestone crystal and pearl blossom embellishments",
+      "Cascading multicolor pastel seed bead tassels with statement pearl drops"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Azure Blue & Terracotta",
+          "hex": "#0077b6",
+          "extraPrice": 0
+        },
+        {
+          "name": "Emerald Green & Crimson",
+          "hex": "#1b4332",
+          "extraPrice": 0
+        },
+        {
+          "name": "Royal Navy & Marigold",
+          "hex": "#03045e",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "24K Gold Leaf",
+        "Silver Trim"
+      ],
+      "sizes": [
+        "Standard 6.5-inch Pair",
+        "Grand 8.5-inch Pair (+₹400)"
+      ],
+      "hangingStyle": [
+        "Double-sided 3M Tape",
+        "Brass Hanging Ring",
+        "Silk Tassel Loop"
+      ],
+      "allowCustomText": false
+    }
+  },
+  {
+    "id": "prod-sl-03",
+    "name": "Rose Quartz Pink Marble Swirl Shubh Labh Tiles with Red Roses & Pearls",
+    "category": "shubh-labh",
+    "categoryName": "Shubh Labh",
+    "price": 849,
+    "originalPrice": 1249,
+    "rating": 4.9,
+    "reviewCount": 62,
+    "badge": "Trending",
+    "isFeatured": false,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": true,
+    "stock": 20,
+    "curingTimeDays": "3 days",
+    "dimensions": "5.5 inches x 5.5 inches (each tile)",
+    "weight": "340 grams (pair)",
+    "images": [
+      "images/shubh-labh/ShubhLabh4.jpg",
+      "images/shubh-labh/ShubhLabhMixed2.jpg"
+    ],
+    "description": "Delicate pastel aesthetics meeting sacred festive tradition. Cast in swirled rose quartz pink and milky white marble resin, featuring 3D embossed crimson-gold Devanagari 'शुभ' and 'लाभ', an artisan 3D red rose blossom crowned with sparkling crystal rhinestones, and cascading multi-strand pearl bead drop tassels.",
+    "features": [
+      "Rose quartz pink & white organic marble swirl pattern",
+      "3D red rose blossom center with crystal rhinestone halo",
+      "Embossed crimson and liquid gold calligraphy",
+      "Multi-strand pearl beaded tassels and pearl hanging top loops",
+      "Perfect for modern apartment entrances, festive doors, and mandir decor"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Rose Quartz Pink Marble",
+          "hex": "#f8edeb",
+          "extraPrice": 0
+        },
+        {
+          "name": "Ivory & Gold Marble",
+          "hex": "#fdf0d5",
+          "extraPrice": 0
+        },
+        {
+          "name": "Lavender Lilac Marble",
+          "hex": "#e8dff5",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "24K Liquid Gold Rim",
+        "Rose Gold Leaf"
+      ],
+      "sizes": [
+        "Standard 5.5-inch Pair"
+      ],
+      "hangingStyle": [
+        "Pearl Beaded Loop",
+        "3M Wall Adhesive"
+      ],
+      "allowCustomText": false
+    }
+  },
+  {
+    "id": "prod-sl-04",
+    "name": "Sacred Pichwai Cow & Lotus Jharokha Shubh Labh Entrance Pair",
+    "category": "shubh-labh",
+    "categoryName": "Shubh Labh",
+    "price": 999,
+    "originalPrice": 1499,
+    "rating": 5.0,
+    "reviewCount": 41,
+    "badge": "Masterpiece",
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNew": true,
+    "isFestival": true,
+    "stock": 15,
+    "curingTimeDays": "3-4 days",
+    "dimensions": "6.5 inches height x 5.2 inches width (each arch)",
+    "weight": "390 grams (pair)",
+    "images": [
+      "images/shubh-labh/ShubhLabhPichwai.jpg",
+      "images/shubh-labh/ShubhLabhTurquoiseJharokha.jpg",
+      "images/shubh-labh/ShubhLabhMixed2.jpg"
+    ],
+    "description": "A tribute to Nathdwara Pichwai art. Features the sacred Kamdhenu cow and calf resting beneath holy lotus flowers, cast under glass-clear sparkling turquoise resin inside handcrafted temple jharokha arches with gold Devanagari 'शुभ' and 'लाभ' calligraphy and pearl cluster drops.",
+    "features": [
+      "Sacred Pichwai Kamdhenu cow & calf with blooming lotus stalks",
+      "Vibrant turquoise mica shimmer resin with glass-like 72h diamond cure",
+      "Gold-dusted temple arch frames",
+      "Dangling golden zardosi and pearl bead drops",
+      "Brings prosperity, abundance, and positive spiritual vibrations to the home"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Turquoise Pichwai",
+          "hex": "#0096c7",
+          "extraPrice": 0
+        },
+        {
+          "name": "Sindoor Red Pichwai",
+          "hex": "#b7094c",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "24K Gold Dust & Flakes",
+        "Pure Gold Leaf"
+      ],
+      "sizes": [
+        "Standard 6.5-inch Pair",
+        "Grand 8.5-inch Pair (+₹450)"
+      ],
+      "hangingStyle": [
+        "Zari Hanging Cord",
+        "3M Wall Adhesive"
+      ],
+      "allowCustomText": false
+    }
+  },
+  {
+    "id": "prod-sl-05",
+    "name": "Diamond Silhouette Crimson Red & Gold Rose Shubh Labh Hangings",
+    "category": "shubh-labh",
+    "categoryName": "Shubh Labh",
+    "price": 849,
+    "originalPrice": 1199,
+    "rating": 4.8,
+    "reviewCount": 38,
+    "badge": "Festival Special",
+    "isFeatured": false,
+    "isBestseller": true,
+    "isNew": true,
+    "isFestival": true,
+    "stock": 25,
+    "curingTimeDays": "3 days",
+    "dimensions": "5.5 inches x 5.5 inches (diamond orientation)",
+    "weight": "330 grams (pair)",
+    "images": [
+      "images/shubh-labh/ShubhLabhDiamondRose.jpg",
+      "images/shubh-labh/ShubhLabhTurquoiseJharokha.jpg",
+      "images/shubh-labh/ShubhLabhMixed2.jpg"
+    ],
+    "description": "Geometric diamond silhouette crafted in auspicious crimson red resin, bordered with sparkling crystal rhinestones. Accented with golden filigree leaves, an artisan red rose centerpiece with diamond crystals, 3D gold embossed 'शुभ' and 'लाभ', and triple-strand dangling pearl cluster tassels.",
+    "features": [
+      "Modern diamond / rhombus silhouette for eye-catching door placement",
+      "Crystal rhinestone encrusted outer rim",
+      "Sculpted 3D red rose blossom flanked by golden filigree leaf branches",
+      "Triple-strand cascading pearl drops with golden seed beads",
+      "Pearl beaded hanging top loop for easy mounting"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Festive Crimson Red",
+          "hex": "#9d0208",
+          "extraPrice": 0
+        },
+        {
+          "name": "Royal Emerald Green",
+          "hex": "#1b4332",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "24K Liquid Gold Rim",
+        "Gold Foil"
+      ],
+      "sizes": [
+        "Standard 5.5-inch Diamond Pair"
+      ],
+      "hangingStyle": [
+        "Pearl Beaded Loop",
+        "3M Adhesive"
+      ],
+      "allowCustomText": false
+    }
+  },
+  {
+    "id": "prod-np-01",
+    "name": "Luxury Teak Wood & Emerald River Resin Home Nameplate",
+    "category": "name-plates",
+    "categoryName": "Name Plates",
+    "price": 2799,
+    "originalPrice": 3999,
+    "rating": 5.0,
+    "reviewCount": 78,
+    "badge": "Bestseller",
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": false,
+    "stock": 10,
+    "curingTimeDays": "5-7 business days",
+    "dimensions": "16 inches x 8 inches x 0.8 inches thick",
+    "weight": "1.9 kg",
+    "images": [
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Create an unforgettable first impression at your doorstep. Solid seasoned teak wood halves separated by a mesmerizing hand-poured river of emerald resin with suspended gold leaf flecks. Your names are crafted in 3D laser-cut golden acrylic with weatherproof outdoor durability.",
+    "features": [
+      "Natural live-edge seasoned Burma teak wood",
+      "UV-stabilized resin won't yellow or crack in sun/rain",
+      "3D raised acrylic lettering (choice of mirror gold, matte black, or brass finish)",
+      "Keyhole hangers or stainless steel standoff screws included for mounting",
+      "Complimentary digital layout proof sent on WhatsApp before pouring!"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Emerald River & 24K Gold",
+          "hex": "#1b4332",
+          "extraPrice": 0
+        },
+        {
+          "name": "Ocean Wave Turquoise",
+          "hex": "#0077b6",
+          "extraPrice": 0
+        },
+        {
+          "name": "Smoky Black & Copper River",
+          "hex": "#2b2d42",
+          "extraPrice": 100
+        },
+        {
+          "name": "Amethyst Crystal Purple",
+          "hex": "#5a189a",
+          "extraPrice": 150
+        }
+      ],
+      "sizes": [
+        "14\" x 7\" (Compact)",
+        "16\" x 8\" (Standard)",
+        "18\" x 9\" (+₹600)",
+        "20\" x 10\" Villa Size (+₹1200)"
+      ],
+      "letteringStyle": [
+        "3D Mirror Gold Acrylic",
+        "3D Brushed Brass Acrylic",
+        "3D Matte Black",
+        "Direct Gold Engraving"
+      ],
+      "mountingOption": [
+        "Stainless Steel Standoffs (Floating)",
+        "Concealed Keyhole Hangers"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Line 1: Names (e.g. 'Pooja & Vikram Sharma'), Line 2: House No / Villa Name"
+    }
+  },
+  {
+    "id": "prod-np-02",
+    "name": "Ocean Surf Coastal Resin & Wood Villa Nameplate",
+    "category": "name-plates",
+    "categoryName": "Name Plates",
+    "price": 2999,
+    "originalPrice": 4299,
+    "rating": 4.9,
+    "reviewCount": 45,
+    "badge": "Trending",
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNew": true,
+    "isFestival": false,
+    "stock": 8,
+    "curingTimeDays": "6 days",
+    "dimensions": "16 inches x 8 inches",
+    "weight": "1.8 kg",
+    "images": [
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Capture the serene essence of the ocean at your doorstep. Real frothing white ocean waves crashing against a shore of treated mango wood, personalized with crisp waterproof white or gold 3D letters.",
+    "features": [
+      "Multiple wave layers hand-foamed with heat torch",
+      "Waterproof outdoor polyurethane sealer",
+      "Includes brass wall screw kit"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Caribbean Azure & Foam",
+          "hex": "#0096c7",
+          "extraPrice": 0
+        },
+        {
+          "name": "Deep Pacific Navy",
+          "hex": "#03045e",
+          "extraPrice": 0
+        }
+      ],
+      "sizes": [
+        "14\" x 7\"",
+        "16\" x 8\" (Standard)",
+        "18\" x 9\" (+₹500)"
+      ],
+      "letteringStyle": [
+        "Crisp 3D White Acrylic",
+        "3D Mirror Gold Acrylic"
+      ],
+      "mountingOption": [
+        "Concealed Back Hooks",
+        "Floating Standoffs"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Names & Flat/House Number (e.g. 'The Kapoors - #402')"
+    }
+  },
+  {
+    "id": "prod-np-03",
+    "name": "Botanical Pressed Flower Acrylic & Resin Transparent Nameplate",
+    "category": "name-plates",
+    "categoryName": "Name Plates",
+    "price": 2399,
+    "originalPrice": 3499,
+    "rating": 4.8,
+    "reviewCount": 34,
+    "badge": "New Arrival",
+    "isFeatured": false,
+    "isBestseller": false,
+    "isNew": true,
+    "isFestival": false,
+    "stock": 12,
+    "curingTimeDays": "5 days",
+    "dimensions": "14 inches x 8 inches",
+    "weight": "1.2 kg",
+    "images": [
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "A dreamy glass-like nameplate featuring pressed wildflowers, golden eucalyptus leaves, and 24k gold flakes, set between crystal acrylic with rose gold metallic lettering.",
+    "features": [
+      "Natural botanical floral garland border",
+      "Transparent floating look against your doorway wall",
+      "Includes 4 rose gold mounting standoffs"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Rose Garden Flowers & Gold",
+          "hex": "#f4a261",
+          "extraPrice": 0
+        },
+        {
+          "name": "White Lily & Silver Flakes",
+          "hex": "#e9d8a6",
+          "extraPrice": 0
+        }
+      ],
+      "sizes": [
+        "12\" x 6\"",
+        "14\" x 8\" (Standard)",
+        "16\" x 9\" (+₹450)"
+      ],
+      "letteringStyle": [
+        "Rose Gold Mirror Letters",
+        "Gold Mirror Letters"
+      ],
+      "mountingOption": [
+        "4 Metallic Standoffs (Included)"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Couple Names / Family Surname & House Number"
+    }
+  },
+  {
+    "id": "prod-np-04",
+    "name": "Backlit LED Geode Luxury Residence Nameplate",
+    "category": "name-plates",
+    "categoryName": "Name Plates",
+    "price": 3999,
+    "originalPrice": 5999,
+    "rating": 5.0,
+    "reviewCount": 51,
+    "badge": "Luxury Edition",
+    "isFeatured": false,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": true,
+    "stock": 6,
+    "curingTimeDays": "7 business days",
+    "dimensions": "18 inches x 9 inches x 1.5 inches deep box",
+    "weight": "2.4 kg",
+    "images": [
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "The pinnacle of entrance prestige. Features a glowing warm LED backlit channel behind a deep onyx and gold resin geode plaque with embedded quartz crystals that illuminates your family name at night.",
+    "features": [
+      "Warm White waterproof LED strip embedded inside",
+      "Includes 12V 1.5A power adapter (Plug & Play)",
+      "High impact acrylic back casing",
+      "Stunning ambient night glow"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Onyx Black & Gold Geode",
+          "hex": "#14213d",
+          "extraPrice": 0
+        },
+        {
+          "name": "Sapphire Blue & Quartz",
+          "hex": "#03045e",
+          "extraPrice": 0
+        }
+      ],
+      "sizes": [
+        "18\" x 9\" Standard",
+        "22\" x 11\" Grand Villa (+₹1000)"
+      ],
+      "letteringStyle": [
+        "Edge-lit 3D Gold Acrylic",
+        "3D Brass Finish"
+      ],
+      "mountingOption": [
+        "LED Standoffs with power wire outlet"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Line 1: Full Names, Line 2: Residence / Flat Details"
+    }
+  },
+  {
+    "id": "prod-cst-01",
+    "name": "Agate Geode Resin Coasters with Hand-Gilded Gold Trim (Set of 4)",
+    "category": "coasters",
+    "categoryName": "Coasters",
+    "price": 899,
+    "originalPrice": 1299,
+    "rating": 4.9,
+    "reviewCount": 96,
+    "badge": "Bestseller",
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": false,
+    "stock": 35,
+    "curingTimeDays": "3 business days",
+    "dimensions": "Approx. 4.2 to 4.5 inches diameter each",
+    "weight": "480 grams (set of 4)",
+    "images": [
+      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Elevate your coffee table or cocktail bar with these handcrafted agate geode coasters. Poured with translucent jewel pigments, crushed glass crystal centers, and finished with 24K liquid gold hand-painted gilded rims.",
+    "features": [
+      "Set of 4 unique, organic-shaped geode coasters",
+      "Heat-resistant up to 90°C (safe for piping hot coffee mugs and cold drinks)",
+      "Protective silicone bumper feet underneath to prevent scratching tabletops",
+      "Waterproof and wipes clean with a damp microfiber cloth",
+      "Includes a branded satin ribbon tie ready for gifting"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Emerald Green & Gold",
+          "hex": "#1b4332",
+          "extraPrice": 0
+        },
+        {
+          "name": "Ocean Turquoise & Gold",
+          "hex": "#0077b6",
+          "extraPrice": 0
+        },
+        {
+          "name": "Rose Quartz Blush & Gold",
+          "hex": "#e5989b",
+          "extraPrice": 0
+        },
+        {
+          "name": "Royal Amethyst Purple & Gold",
+          "hex": "#5a189a",
+          "extraPrice": 0
+        },
+        {
+          "name": "Onyx Black & Metallic Copper",
+          "hex": "#212529",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "24K Liquid Gold Rim",
+        "Sterling Silver Rim",
+        "Rose Gold Gilded Rim"
+      ],
+      "setQuantity": [
+        "Set of 4 Coasters",
+        "Set of 6 Coasters (+₹399)",
+        "Set of 4 + Matching Coaster Holder (+₹249)"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Monogram initial in corner (e.g. 'S' or 'R&M')"
+    }
+  },
+  {
+    "id": "prod-cst-02",
+    "name": "Bondi Ocean Wave Acacia Wood & Epoxy Coaster Set (Set of 4)",
+    "category": "coasters",
+    "categoryName": "Coasters",
+    "price": 999,
+    "originalPrice": 1499,
+    "rating": 5.0,
+    "reviewCount": 68,
+    "badge": "Artisan Pick",
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNew": true,
+    "isFestival": false,
+    "stock": 20,
+    "curingTimeDays": "3-4 days",
+    "dimensions": "4 inches x 4 inches square/round",
+    "weight": "520 grams set",
+    "images": [
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Half natural acacia wood with rich natural grain, half vibrant Caribbean ocean resin with 3D frothy seafoam waves. Coated with food-grade high-gloss finish.",
+    "features": [
+      "Genuine durable acacia hardwood base",
+      "Realistic cellular wave foam",
+      "Food-safe, heat-resistant, and scratch-resistant"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Caribbean Blue Waves",
+          "hex": "#00b4d8",
+          "extraPrice": 0
+        },
+        {
+          "name": "Deep Pacific Navy",
+          "hex": "#03045e",
+          "extraPrice": 0
+        },
+        {
+          "name": "Emerald Sea Spray",
+          "hex": "#2d6a4f",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "Fine Gold Shimmer Wave",
+        "Natural Shell Inclusions"
+      ],
+      "setQuantity": [
+        "Set of 4",
+        "Set of 6 (+₹450)"
+      ],
+      "shape": [
+        "Square with Rounded Corners",
+        "Circular Discs"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Laser engraved initials on wood (e.g. 'V&A')"
+    }
+  },
+  {
+    "id": "prod-cst-03",
+    "name": "Pressed Botanical Wildflower Hexagon Coasters (Set of 4)",
+    "category": "coasters",
+    "categoryName": "Coasters",
+    "price": 949,
+    "originalPrice": 1399,
+    "rating": 4.8,
+    "reviewCount": 42,
+    "badge": "Trending",
+    "isFeatured": false,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": false,
+    "stock": 25,
+    "curingTimeDays": "3 days",
+    "dimensions": "4 inches hexagon",
+    "weight": "440 grams set",
+    "images": [
+      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Preserved baby's breath, mini daisies, and fern fronds arranged in modern geometric hexagons with a scattering of 24K gold foil.",
+    "features": [
+      "Hand-pressed seasonal flowers",
+      "Diamond clear transparent resin",
+      "Anti-slip clear silicone feet"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Sunny Meadow Florals",
+          "hex": "#f4a261",
+          "extraPrice": 0
+        },
+        {
+          "name": "Pastel Lavender & Pink",
+          "hex": "#c77dff",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "24K Gold Leaf",
+        "Silver Leaf",
+        "Rose Gold Leaf"
+      ],
+      "setQuantity": [
+        "Set of 4",
+        "Set of 6 (+₹400)"
+      ],
+      "allowCustomText": false
+    }
+  },
+  {
+    "id": "prod-cst-04",
+    "name": "Midnight Black & 24K Gold Flake Luxury Coasters (Set of 4)",
+    "category": "coasters",
+    "categoryName": "Coasters",
+    "price": 849,
+    "originalPrice": 1199,
+    "rating": 4.9,
+    "reviewCount": 39,
+    "badge": "Modern Lux",
+    "isFeatured": false,
+    "isBestseller": false,
+    "isNew": true,
+    "isFestival": true,
+    "stock": 22,
+    "curingTimeDays": "3 days",
+    "dimensions": "4.2 inches diameter",
+    "weight": "460 grams set",
+    "images": [
+      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Bold, dramatic contrast of deep onyx resin with floating dense 24K gold leaf veins. Hand-gilded metallic gold rim creates a regal tabletop presence.",
+    "features": [
+      "High opacity black pigment with gold suspension",
+      "Luxury gilded rim",
+      "Heat-resistant up to 90°C"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Onyx Black & Gold",
+          "hex": "#18181b",
+          "extraPrice": 0
+        },
+        {
+          "name": "White Carrara & Gold",
+          "hex": "#f8f9fa",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "24K Gold Leaf",
+        "Rose Gold Leaf"
+      ],
+      "setQuantity": [
+        "Set of 4",
+        "Set of 6 (+₹380)"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Monogram initial (optional)"
+    }
+  },
+  {
+    "id": "prod-cg-01",
+    "name": "Wedding Varmala Garland Flower Preservation Resin Hexagon Block",
+    "category": "customized-gifts",
+    "categoryName": "Customized Gifts",
+    "price": 3999,
+    "originalPrice": 5999,
+    "rating": 5.0,
+    "reviewCount": 114,
+    "badge": "Heirloom Pick",
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": false,
+    "stock": 12,
+    "curingTimeDays": "12-14 days (Multi-stage flower dehydration & deep pour)",
+    "dimensions": "8 inches height x 9 inches width x 2 inches thickness",
+    "weight": "2.3 kg solid crystal resin",
+    "images": [
+      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Don't let your once-in-a-lifetime wedding varmala garland dry up and wither away in a box. Send us your fresh or dried wedding flowers, and our master artisans will dehydrate them using specialized silica preservation before encasing them in a massive, optically flawless 8-inch crystal resin hexagon or heart keepsake block.",
+    "features": [
+      "Professional 7-day silica gel moisture extraction preserves flower shape & vibrant color",
+      "Slow-curing low-exotherm deep pour resin prevents petal scorching or discoloration",
+      "Can incorporate wedding invitation card, varmala flowers, groom's brooch, or kaleere",
+      "Personalized with couple's names, wedding hashtag, and wedding date in gold calligraphy",
+      "Optional Warm LED wooden display light base with USB switch",
+      "Free pan-India pickup of your wedding flowers arranged!"
+    ],
+    "customizationOptions": {
+      "shape": [
+        "Large Hexagon (8\" x 9\")",
+        "Large Heart Block (8\" x 8\")",
+        "Square Keepsake Cube (7\" x 7\")",
+        "Arched Dome Block (+₹500)"
+      ],
+      "foilTypes": [
+        "24K Gold Foil Flakes",
+        "Rose Gold Flakes",
+        "Silver Dust",
+        "Clear Minimalist (No Foil)"
+      ],
+      "displayBase": [
+        "Solid Teak LED Warm Glow Base (+₹699)",
+        "Standard Acrylic Stand (Free)",
+        "No Stand (Free-standing)"
+      ],
+      "allowPhotoUpload": true,
+      "allowCustomText": true,
+      "textPlaceholder": "Couple Names & Wedding Date (e.g. 'Ananya & Kabir - 24.11.2024')"
+    }
+  },
+  {
+    "id": "prod-cg-02",
+    "name": "Baby's First Milestone Birth Stats Keepsake Resin Pyramid",
+    "category": "customized-gifts",
+    "categoryName": "Customized Gifts",
+    "price": 2499,
+    "originalPrice": 3499,
+    "rating": 4.9,
+    "reviewCount": 48,
+    "badge": "New Arrival",
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNew": true,
+    "isFestival": false,
+    "stock": 15,
+    "curingTimeDays": "5-6 days",
+    "dimensions": "6 inches x 6 inches pyramid base",
+    "weight": "1.1 kg",
+    "images": [
+      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Preserve the precious memory of your newborn's arrival forever. Handcrafted pyramid block embedding baby's hospital tag, umbilical cord clamp, first lock of hair, birth weight, height, time, and baby photo.",
+    "features": [
+      "Crystal clear optical resin with gold leaf floating halo",
+      "Permanent custom birth stats plaque",
+      "Safe preservation for hospital wristband & hospital memorabilia"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Baby Blue Cloud & Silver",
+          "hex": "#bde0fe",
+          "extraPrice": 0
+        },
+        {
+          "name": "Baby Pink Blossom & Gold",
+          "hex": "#ffc8dd",
+          "extraPrice": 0
+        },
+        {
+          "name": "Pastel Lemon & Gold",
+          "hex": "#fefae0",
+          "extraPrice": 0
+        },
+        {
+          "name": "Pure Crystal Clear & Gold",
+          "hex": "#ffffff",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "24K Gold Leaf",
+        "Silver Stars",
+        "Rose Gold Flakes"
+      ],
+      "allowPhotoUpload": true,
+      "allowCustomText": true,
+      "textPlaceholder": "Baby Name, Birth Date, Time, Weight, Hospital (e.g. 'Aarav | 18 Aug 2024 | 3.2 kg | 10:45 AM')"
+    }
+  },
+  {
+    "id": "prod-cg-03",
+    "name": "Custom 3D Resin Photo Keepsake Night Light with Wooden LED Base",
+    "category": "customized-gifts",
+    "categoryName": "Customized Gifts",
+    "price": 1999,
+    "originalPrice": 2899,
+    "rating": 4.9,
+    "reviewCount": 83,
+    "badge": "Trending",
+    "isFeatured": false,
+    "isBestseller": true,
+    "isNew": false,
+    "isFestival": true,
+    "stock": 20,
+    "curingTimeDays": "4-5 days",
+    "dimensions": "6 inches x 5 inches x 1 inch thick block",
+    "weight": "850 grams",
+    "images": [
+      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Transform your favorite memories into glowing art. Your high-definition photo is sealed inside high-refraction resin with dried flowers and gold flakes, slotted into a solid beechwood LED base that casts a magical ambient glow.",
+    "features": [
+      "Warm ambient LED base with USB cord and on/off rocker switch",
+      "Waterproof archival photo print inside resin",
+      "Stunning bedside night lamp or living room mantle showpiece"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Golden Shimmer Flakes",
+          "hex": "#d4af37",
+          "extraPrice": 0
+        },
+        {
+          "name": "Pink & White Floral Surround",
+          "hex": "#ffafcc",
+          "extraPrice": 0
+        },
+        {
+          "name": "Blue Lagoon Tint",
+          "hex": "#90e0ef",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "24K Gold Leaf",
+        "Rose Gold",
+        "None"
+      ],
+      "allowPhotoUpload": true,
+      "allowCustomText": true,
+      "textPlaceholder": "Engraving on Wooden Base (e.g. 'Forever & Always - R&S')"
+    }
+  },
+  {
+    "id": "prod-cg-04",
+    "name": "Anniversary Love Vows & Ring Box Keepsake Plaque",
+    "category": "customized-gifts",
+    "categoryName": "Customized Gifts",
+    "price": 2299,
+    "originalPrice": 3299,
+    "rating": 5.0,
+    "reviewCount": 36,
+    "badge": "Anniversary Spl",
+    "isFeatured": false,
+    "isBestseller": false,
+    "isNew": true,
+    "isFestival": false,
+    "stock": 14,
+    "curingTimeDays": "4 days",
+    "dimensions": "7 inches x 7 inches",
+    "weight": "950 grams",
+    "images": [
+      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80"
+    ],
+    "description": "Immortalize your wedding vows, ring exchange date, or love note. Crafted with real pressed red roses, gold calligraphy script, and twin brass pegs to safely hold couple wedding rings.",
+    "features": [
+      "Twin brass pegs hold wedding bands during pooja or bedtime",
+      "Personalized love vow calligraphy printed on archival parchment",
+      "Clear optical resin with 24k gold leaf accents"
+    ],
+    "customizationOptions": {
+      "colorPalette": [
+        {
+          "name": "Rose Petals & Gold",
+          "hex": "#b7094c",
+          "extraPrice": 0
+        },
+        {
+          "name": "Ivory Pearl & Champagne Gold",
+          "hex": "#f8f9fa",
+          "extraPrice": 0
+        }
+      ],
+      "foilTypes": [
+        "24K Gold Leaf",
+        "Silver Flakes"
+      ],
+      "allowCustomText": true,
+      "textPlaceholder": "Couple Names, Date & Your Special 1-line Vow"
+    }
+  }
+]

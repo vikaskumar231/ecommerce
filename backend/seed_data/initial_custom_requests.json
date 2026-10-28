@@ -1,0 +1,50 @@
+[
+  {
+    "id": "REQ-8491",
+    "username": "Meenu",
+    "customerName": "Meenu Sharma",
+    "phone": "+91 98200 67890",
+    "email": "meenu.sharma@example.com",
+    "productType": "Wedding Garland Varmala Preservation",
+    "dimensions": "10-inch Square Block with LED Light Base",
+    "colorPalette": "Pearl White & Rose Gold Shimmer",
+    "inclusions": "Fresh Varmala Red Roses, Jasmine & Wedding Invitation Card",
+    "customText": "Meenu & Rohit - 12.12.2026",
+    "status": "Pending Quote",
+    "estimatedBudget": "₹5,000 - ₹6,500",
+    "notes": "Wedding on Dec 12th. Want flowers picked up from Bandra venue.",
+    "createdAt": "2026-10-21T09:20:00.000Z"
+  },
+  {
+    "id": "REQ-8492",
+    "username": "Vikas",
+    "customerName": "Vikas Kumar",
+    "phone": "+91 98100 12345",
+    "email": "vikas@example.com",
+    "productType": "Live Edge River Resin Dining Table Top",
+    "dimensions": "5 ft x 3 ft Teak Slab",
+    "colorPalette": "Deep Ocean Turquoise Blue with White Foam Waves",
+    "inclusions": "Metallic mica pigments, LED channel along river",
+    "customText": "The Kumar Hearth",
+    "status": "In Discussion",
+    "estimatedBudget": "₹35,000 - ₹45,000",
+    "notes": "Custom conference/dining table for home penthouse in Indiranagar.",
+    "createdAt": "2026-10-19T16:45:00.000Z"
+  },
+  {
+    "id": "REQ-8493",
+    "username": "Ananta",
+    "customerName": "Ananta Verma",
+    "phone": "+91 98300 45678",
+    "email": "ananta.verma@example.com",
+    "productType": "Ocean Surf Resin Geode Coffee Table",
+    "dimensions": "24-inch Round Solid Acacia Wood",
+    "colorPalette": "Pacific Ocean Navy & Emerald Surf",
+    "inclusions": "Genuine beach sand, mini sea shells, gold trim",
+    "customText": "Serenity - Ananta & Varun",
+    "status": "Approved & Scheduling",
+    "estimatedBudget": "₹8,500 - ₹10,000",
+    "notes": "Anniversary gift for balcony lounge in Whitefield.",
+    "createdAt": "2026-10-21T18:10:00.000Z"
+  }
+]

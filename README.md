@@ -1,8 +1,6 @@
 # Art आलय (Art Alay) — Handcrafted Customized Resin Art & E-Commerce Platform
 
-A luxury e-commerce web application designed for selling handmade, customized resin art, botanical jewelry, festive home decor, and preserved wedding keepsakes.
-
-Built with **HTML5, Vanilla CSS, and modern JavaScript**, featuring an artisan aesthetic (champagne gold, deep emerald, sapphire, and opalescent resin shine), responsive layouts, and rich interactive micro-animations.
+Built with **React 18, Vite 6, and Vanilla CSS** with a robust **Python 3.11 Business Tier** backed by an SQLite relational database (`backend/data/artalay.db`) and external secrets configuration (`secrets.json`). Featuring an artisan luxury aesthetic (champagne gold, deep emerald, sapphire, and opalescent resin shine), responsive layouts, and rich interactive micro-animations.
 
 ---
 
@@ -103,21 +101,74 @@ Easily accessible via the **⚙️ Admin** button in the header:
 
 ---
 
+## 🐍 Python Business Tier & Database Architecture
+
+The application includes a modular **Python 3.11 Business Tier** backed by a relational database and secrets configuration:
+
+### 1. Database & Secrets File (`secrets.json`)
+- All database parameters and third-party credentials are securely loaded from [secrets.json](file:///c:/Vikas/GitHub/ecommerce/secrets.json) (a template is available in [secrets.example.json](file:///c:/Vikas/GitHub/ecommerce/secrets.example.json)).
+- Dummy enterprise database connection parameters:
+  - **Configured Engine:** `postgresql`
+  - **Configured Host:** `db-cluster.artalay-resin-enterprise.internal:5432`
+  - **Configured Database:** `artalay_ecommerce_db`
+  - **Configured User:** `art_alay_db_admin`
+  - **Configured Password:** `ArtAlay_SuperSecret_Resin_Password_2026!#` (Masked as `ArtA****6!#` on all status endpoints)
+  - **Active Persistent Database Engine:** SQLite relational database at `backend/data/artalay.db` with thread-safe connection pooling, automated schema migrations, and seeder.
+
+### 2. Database Schema
+- **`products`**: Product catalog with categories, prices, options, curation flags, and images.
+- **`categories`**: Categories with live count of products in each category.
+- **`orders`**: Customer orders with full address, ordered items, payment status, and tracking steps.
+- **`custom_requests`**: Bespoke customized inquiries and quotes.
+- **`users`**: Customer account credentials, addresses, and wishlist.
+- **`promo_codes`**: Promotional discount rules.
+
+### 3. REST API Endpoints
+- `GET /api/health` — System status and database row counts.
+- `GET /api/system/secrets-info` — Masked database secrets and configuration details.
+- `GET /api/products` — Retrieve product catalog from database (with filters).
+- `GET /api/products/<id>` — Retrieve single product details.
+- `POST /api/products` — Create new product in database (Admin).
+- `PUT /api/products/<id>` — Update product or photo in database (Admin).
+- `DELETE /api/products/<id>` — Delete product from database (Admin).
+- `GET /api/categories` — Live category list with computed product counts.
+- `GET /api/orders` — Retrieve customer orders from database.
+- `POST /api/orders` — Persist customer order in database upon checkout.
+- `PUT /api/orders/<id>` — Update order lifecycle and tracking steps in database.
+- `GET /api/custom-requests` / `POST /api/custom-requests` — Bespoke inquiries.
+- `POST /api/auth/login` / `POST /api/auth/register` — User authentication.
+
+---
+
 ## 🚀 How to Run Locally
 
-### Option A: Using the Built-in Python Server (Running on Port 8080)
-1. Open terminal in the project directory:
+### Option A: Direct Full-Stack Serving (Production Mode)
+1. Run the Python Business Tier (serves both React SPA from `dist/` and REST API from `http://127.0.0.1:8000`):
    ```bash
-   cd c:\Vikas\GitHub\ecommerce
-   python -m http.server 8080
+   python run_server.py
    ```
 2. Open your browser and navigate to:
    ```
-   http://localhost:8080/index.html
+   http://127.0.0.1:8000/
    ```
+3. Check the top announcement bar for the **`Python Business Tier: Online`** status pill. Click it to view the live database diagnostics and masked `secrets.json` parameters.
 
-### Option B: Direct Browser Launch
-Because the application is built with standard web technologies (HTML5, Vanilla CSS, Vanilla JS) with zero build dependencies, you can also double-click `index.html` to open it in any modern browser (Chrome, Edge, Firefox, Safari).
+### Option B: React Vite Development Mode (Hot-Reloading)
+1. In one terminal, start the Python Business Tier API:
+   ```bash
+   python run_server.py
+   ```
+2. In a second terminal, start the Vite React development server:
+   ```bash
+   npm run dev
+   ```
+3. Open `http://localhost:5173/`. Vite automatically proxies all `/api/*` network requests to the Python server on `http://127.0.0.1:8000`.
+
+### Building for Production
+To recompile the React production assets into `dist/`:
+```bash
+npm run build
+```
 
 ---
 
@@ -125,15 +176,62 @@ Because the application is built with standard web technologies (HTML5, Vanilla 
 
 ```
 c:\Vikas\GitHub\ecommerce\
-├── index.html          # Semantic master HTML file with all SPA views & modals
-├── css\
-│   └── style.css       # Master stylesheet (luxury resin theme, typography, animations, responsive design)
-├── js\
-│   ├── data.js         # 36+ products across 9 categories, reviews, promo codes, sample orders
-│   ├── store.js        # Reactive LocalStorage manager (products, cart, wishlist, orders, admin mutations)
-│   └── app.js          # Master controller (view routing, PDP customizer, wizard, payments, tracking, admin)
-├── LICENSE             # Project license
-└── README.md           # Comprehensive project documentation
+├── secrets.json              # Database credentials & API keys (dummy secrets)
+├── secrets.example.json      # Secrets template for deployment
+├── package.json              # React 18 & Vite dependencies
+├── vite.config.js            # Vite configuration & /api proxy to Python backend
+├── index.html                # Vite React HTML entrypoint
+├── index.legacy.html         # Original legacy vanilla HTML backup
+├── run_server.py             # Root server launcher
+├── test_react_integration.py # Automated integration test suite
+├── dist\                     # Compiled production React SPA bundle
+│   ├── index.html
+│   └── assets\
+├── src\                      # React 18 Application Source
+│   ├── main.jsx              # React DOM root render
+│   ├── App.jsx               # Master view router & layout orchestrator
+│   ├── index.css             # Luxury design system styles & animations
+│   ├── context\
+│   │   └── StoreContext.jsx  # Global React Context & REST API synchronizer
+│   ├── data\
+│   │   └── initialData.js    # Fallback categories, promo codes & profiles
+│   └── components\           # Modular React Components
+│       ├── AnnouncementBar.jsx       # Top ribbon with live Python status
+│       ├── Header.jsx                # Search, nav links, badges & user chip
+│       ├── HeroBanner.jsx            # Value props & luxury resin banner
+│       ├── ProductCard.jsx           # Interactive cards with quick actions
+│       ├── HomeProductsGrid.jsx      # Curated collection tabs & reviews
+│       ├── CatalogView.jsx           # All 9 categories, sidebar & search
+│       ├── ProductDetailsView.jsx    # PDP with live engraving preview & swatches
+│       ├── BespokeStudio.jsx         # 5-step interactive resin customizer
+│       ├── CartDrawer.jsx            # Slide-out cart with shipping bar & promo codes
+│       ├── CheckoutView.jsx          # 2-column checkout with 50% advance option
+│       ├── PaymentGatewayModal.jsx   # 256-bit SSL simulated gateway (UPI/Cards)
+│       ├── OrderTrackingView.jsx     # 6-stage resin curing milestone tracker
+│       ├── AccountView.jsx           # User orders, wishlist & quotes
+│       ├── AdminView.jsx             # Python architecture card & photo/order manager
+│       ├── BackendDiagnosticsModal.jsx # Live secrets & DB diagnostics modal
+│       ├── LoginModal.jsx            # 1-click demo profiles & authentication
+│       └── Toast.jsx                 # Notification alerts
+├── backend\
+│   ├── config.py             # Secrets loader & credential masking
+│   ├── database.py           # Database connection, schemas, and seeder
+│   ├── data\
+│   │   └── artalay.db        # Persistent SQLite database
+│   ├── seed_data\            # Initial catalog & orders JSON data
+│   ├── services\             # Business Tier Services
+│   │   ├── catalog_service.py # Catalog CRUD, filtering, search
+│   │   ├── order_service.py   # Order placement & milestone tracking
+│   │   ├── custom_request_service.py # Bespoke inquiries
+│   │   └── user_service.py    # Authentication & user accounts
+│   ├── api\
+│   │   └── router.py         # REST API request dispatcher
+│   └── server.py             # Multithreaded HTTP server & static/SPA file host
+├── public\
+│   └── images\               # Static assets & SVGs for Vite
+├── images\                   # Local artwork & product SVGs
+├── LICENSE                   # Project license
+└── README.md                 # Comprehensive project documentation
 ```
 
 ---

@@ -1,0 +1,467 @@
+[
+  {
+    "orderId": "ORD-VIKAS-101",
+    "username": "Vikas",
+    "customer": {
+      "name": "Vikas Kumar",
+      "phone": "+91 98100 12345",
+      "email": "vikas@example.com",
+      "address": "104, Royal Palms Residency, 100ft Road, Indiranagar",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "pincode": "560038"
+    },
+    "items": [
+      {
+        "id": "prod-np-01",
+        "name": "Luxury Teak Wood & Emerald River Resin Home Nameplate",
+        "price": 2799,
+        "quantity": 1,
+        "selectedOptions": {
+          "color": "Emerald River & 24K Gold",
+          "size": "16\" x 8\" (Standard)",
+          "foil": "24K Gold Leaf",
+          "customText": "Vikas Kumar - Palm Sanctuary"
+        },
+        "image": "images/name-plates.svg"
+      }
+    ],
+    "subtotal": 2799,
+    "discount": 280,
+    "shipping": 0,
+    "total": 2519,
+    "paymentMethod": "UPI (Google Pay)",
+    "paymentStatus": "Paid",
+    "orderStatus": "Curing",
+    "trackingSteps": [
+      {
+        "status": "Order Placed",
+        "date": "20 Oct 2026, 02:30 PM",
+        "completed": true,
+        "note": "Order confirmed and master artisan assigned"
+      },
+      {
+        "status": "Resin Poured",
+        "date": "21 Oct 2026, 11:15 AM",
+        "completed": true,
+        "note": "Emerald pigment and 24K gold foil layered with reclaimed teak"
+      },
+      {
+        "status": "Deep Curing (72h)",
+        "date": "22 Oct 2026, 09:00 AM",
+        "completed": true,
+        "active": true,
+        "note": "Curing under temperature-controlled UV chambers"
+      },
+      {
+        "status": "Sanding & Polishing",
+        "date": "Estimated 23 Oct 2026",
+        "completed": false,
+        "note": "Diamond bevel edging and glass buffing"
+      },
+      {
+        "status": "Dispatched",
+        "date": "Estimated 24 Oct 2026",
+        "completed": false,
+        "note": "BlueDart Express Courier"
+      },
+      {
+        "status": "Delivered",
+        "date": "Estimated 26 Oct 2026",
+        "completed": false,
+        "note": "Doorstep delivery to Indiranagar"
+      }
+    ],
+    "trackingNumber": "BD-88492019IN",
+    "placedAt": "2026-10-20T14:30:00.000Z"
+  },
+  {
+    "orderId": "ORD-VIKAS-102",
+    "username": "Vikas",
+    "customer": {
+      "name": "Vikas Kumar",
+      "phone": "+91 98100 12345",
+      "email": "vikas@example.com",
+      "address": "104, Royal Palms Residency, 100ft Road, Indiranagar",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "pincode": "560038"
+    },
+    "items": [
+      {
+        "id": "prod-clk-01",
+        "name": "Royal Sapphire Geode Resin Wall Clock with Quartz",
+        "price": 3499,
+        "quantity": 1,
+        "selectedOptions": {
+          "color": "Royal Sapphire & Gold",
+          "size": "14 Inches (Standard)",
+          "dialTypes": "Roman Numerals (Gold)",
+          "handsColor": "Polished Gold Hands"
+        },
+        "image": "images/wall-clock.svg"
+      }
+    ],
+    "subtotal": 3499,
+    "discount": 0,
+    "shipping": 0,
+    "total": 3499,
+    "paymentMethod": "UPI (Google Pay)",
+    "paymentStatus": "Paid",
+    "orderStatus": "Delivered",
+    "trackingSteps": [
+      {
+        "status": "Order Placed",
+        "date": "10 Oct 2026",
+        "completed": true,
+        "note": "Order placed & quartz selected"
+      },
+      {
+        "status": "Resin Poured",
+        "date": "11 Oct 2026",
+        "completed": true,
+        "note": "Deep sapphire resin layered with crystals"
+      },
+      {
+        "status": "Deep Curing (72h)",
+        "date": "12 Oct 2026",
+        "completed": true,
+        "note": "Diamond crystal cured"
+      },
+      {
+        "status": "Sanding & Polishing",
+        "date": "13 Oct 2026",
+        "completed": true,
+        "note": "Movement calibrated"
+      },
+      {
+        "status": "Dispatched",
+        "date": "14 Oct 2026",
+        "completed": true,
+        "note": "Delhivery Express (AWB: DEL-772910)"
+      },
+      {
+        "status": "Delivered",
+        "date": "16 Oct 2026, 04:15 PM",
+        "completed": true,
+        "active": true,
+        "note": "Delivered safely and installed"
+      }
+    ],
+    "trackingNumber": "DEL-772910",
+    "placedAt": "2026-10-10T11:00:00.000Z"
+  },
+  {
+    "orderId": "ORD-MEENU-201",
+    "username": "Meenu",
+    "customer": {
+      "name": "Meenu Sharma",
+      "phone": "+91 98200 67890",
+      "email": "meenu.sharma@example.com",
+      "address": "Flat 702, Silver Sands Apt, Carter Road, Bandra West",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400050"
+    },
+    "items": [
+      {
+        "id": "prod-trn-01",
+        "name": "Shubh Bandhan Handcrafted Resin Lotus & Marigold Festive Toran",
+        "price": 1899,
+        "quantity": 1,
+        "selectedOptions": {
+          "color": "Lotus Crimson & Amber Gold",
+          "foil": "24K Gold Foil Veins",
+          "bellStyle": "Tinkle Brass Ghungroo Bells"
+        },
+        "image": "images/toran.svg"
+      }
+    ],
+    "subtotal": 1899,
+    "discount": 0,
+    "shipping": 0,
+    "total": 1899,
+    "paymentMethod": "Credit Card (HDFC)",
+    "paymentStatus": "Paid",
+    "orderStatus": "Resin Poured",
+    "trackingSteps": [
+      {
+        "status": "Order Placed",
+        "date": "21 Oct 2026, 09:45 AM",
+        "completed": true,
+        "note": "Festive rush order confirmed"
+      },
+      {
+        "status": "Resin Poured",
+        "date": "22 Oct 2026, 10:30 AM",
+        "completed": true,
+        "active": true,
+        "note": "7 Lotus motifs cast with preserved marigold petals"
+      },
+      {
+        "status": "Deep Curing (72h)",
+        "date": "Scheduled 23 Oct 2026",
+        "completed": false,
+        "note": "UV chamber curing"
+      },
+      {
+        "status": "Sanding & Polishing",
+        "date": "Scheduled 24 Oct 2026",
+        "completed": false,
+        "note": "Brass bells attachment"
+      },
+      {
+        "status": "Dispatched",
+        "date": "Estimated 25 Oct 2026",
+        "completed": false,
+        "note": "Air Express Mumbai Delivery"
+      },
+      {
+        "status": "Delivered",
+        "date": "Estimated 26 Oct 2026",
+        "completed": false,
+        "note": "Festive arrival"
+      }
+    ],
+    "trackingNumber": "EXP-MUM-99214",
+    "placedAt": "2026-10-21T09:45:00.000Z"
+  },
+  {
+    "orderId": "ORD-MEENU-202",
+    "username": "Meenu",
+    "customer": {
+      "name": "Meenu Sharma",
+      "phone": "+91 98200 67890",
+      "email": "meenu.sharma@example.com",
+      "address": "Flat 702, Silver Sands Apt, Carter Road, Bandra West",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "pincode": "400050"
+    },
+    "items": [
+      {
+        "id": "prod-ear-01",
+        "name": "Ocean Serenade Gold Flake Resin Drop Earrings",
+        "price": 699,
+        "quantity": 1,
+        "selectedOptions": {
+          "color": "Ocean Teal & Gold",
+          "foil": "24K Gold Flakes",
+          "hooks": "Surgical Steel Hooks"
+        },
+        "image": "images/earrings.svg"
+      }
+    ],
+    "subtotal": 699,
+    "discount": 0,
+    "shipping": 0,
+    "total": 699,
+    "paymentMethod": "UPI (PhonePe)",
+    "paymentStatus": "Paid",
+    "orderStatus": "Delivered",
+    "trackingSteps": [
+      {
+        "status": "Order Placed",
+        "date": "05 Oct 2026",
+        "completed": true,
+        "note": "Order placed"
+      },
+      {
+        "status": "Resin Poured",
+        "date": "06 Oct 2026",
+        "completed": true,
+        "note": "Earring mold cured"
+      },
+      {
+        "status": "Deep Curing (72h)",
+        "date": "07 Oct 2026",
+        "completed": true,
+        "note": "Curing complete"
+      },
+      {
+        "status": "Sanding & Polishing",
+        "date": "08 Oct 2026",
+        "completed": true,
+        "note": "Hooks assembled"
+      },
+      {
+        "status": "Dispatched",
+        "date": "09 Oct 2026",
+        "completed": true,
+        "note": "Delhivery Air"
+      },
+      {
+        "status": "Delivered",
+        "date": "11 Oct 2026, 01:20 PM",
+        "completed": true,
+        "active": true,
+        "note": "Delivered with velvet pouch"
+      }
+    ],
+    "trackingNumber": "DEL-441092",
+    "placedAt": "2026-10-05T16:20:00.000Z"
+  },
+  {
+    "orderId": "ORD-ANANTA-301",
+    "username": "Ananta",
+    "customer": {
+      "name": "Ananta Verma",
+      "phone": "+91 98300 45678",
+      "email": "ananta.verma@example.com",
+      "address": "Villa 18, Lakeview Enclave, Whitefield",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "pincode": "560066"
+    },
+    "items": [
+      {
+        "id": "prod-cst-01",
+        "name": "Agate Geode Resin Coasters with Hand-Gilded Gold Trim",
+        "price": 899,
+        "quantity": 1,
+        "selectedOptions": {
+          "color": "Emerald Green & Gold",
+          "foil": "24K Liquid Gold Rim",
+          "customText": "A&V"
+        },
+        "image": "images/coasters.svg"
+      },
+      {
+        "id": "prod-bm-01",
+        "name": "Enchanted Wildflower Botanical Resin Bookmark",
+        "price": 249,
+        "quantity": 2,
+        "selectedOptions": {
+          "color": "Lavender Fields",
+          "foil": "24K Gold Leaf",
+          "customText": "Ananta"
+        },
+        "image": "images/book-mark.svg"
+      }
+    ],
+    "subtotal": 1397,
+    "discount": 140,
+    "shipping": 0,
+    "total": 1257,
+    "paymentMethod": "Credit Card (Visa)",
+    "paymentStatus": "Paid",
+    "orderStatus": "Shipped",
+    "trackingSteps": [
+      {
+        "status": "Order Placed",
+        "date": "17 Oct 2026",
+        "completed": true,
+        "note": "Payment verified"
+      },
+      {
+        "status": "Resin Poured",
+        "date": "18 Oct 2026",
+        "completed": true,
+        "note": "Hand-poured with real botanicals"
+      },
+      {
+        "status": "Deep Curing (72h)",
+        "date": "19 Oct 2026",
+        "completed": true,
+        "note": "Crystal gloss achieved"
+      },
+      {
+        "status": "Sanding & Polishing",
+        "date": "20 Oct 2026",
+        "completed": true,
+        "note": "Liquid gold rim applied"
+      },
+      {
+        "status": "Dispatched",
+        "date": "21 Oct 2026",
+        "completed": true,
+        "active": true,
+        "note": "Shipped via Delhivery Express (AWB: DEL-9938102)"
+      },
+      {
+        "status": "Delivered",
+        "date": "Estimated 23 Oct 2026",
+        "completed": false,
+        "note": "Out for delivery in Whitefield"
+      }
+    ],
+    "trackingNumber": "DEL-9938102",
+    "placedAt": "2026-10-17T10:15:00.000Z"
+  },
+  {
+    "orderId": "ORD-ANANTA-302",
+    "username": "Ananta",
+    "customer": {
+      "name": "Ananta Verma",
+      "phone": "+91 98300 45678",
+      "email": "ananta.verma@example.com",
+      "address": "Villa 18, Lakeview Enclave, Whitefield",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "pincode": "560066"
+    },
+    "items": [
+      {
+        "id": "prod-clk-03",
+        "name": "Gilded Marble Luxury Resin Wall Clock 15-Inch",
+        "price": 3199,
+        "quantity": 1,
+        "selectedOptions": {
+          "color": "White Marble & Gold",
+          "size": "15 Inches Standard",
+          "dialTypes": "Gold Mirror Roman Numerals",
+          "handsColor": "Brushed Gold Hands"
+        },
+        "image": "images/wall-clock.svg"
+      }
+    ],
+    "subtotal": 3199,
+    "discount": 0,
+    "shipping": 0,
+    "total": 3199,
+    "paymentMethod": "UPI (Google Pay)",
+    "paymentStatus": "Paid",
+    "orderStatus": "Placed",
+    "trackingSteps": [
+      {
+        "status": "Order Placed",
+        "date": "22 Oct 2026, 08:30 AM",
+        "completed": true,
+        "active": true,
+        "note": "Order placed & artisan marble template prepared"
+      },
+      {
+        "status": "Resin Poured",
+        "date": "Scheduled 23 Oct 2026",
+        "completed": false,
+        "note": "Carrara marble effect casting"
+      },
+      {
+        "status": "Deep Curing (72h)",
+        "date": "Scheduled 24 Oct 2026",
+        "completed": false,
+        "note": "72-hour curing cycle"
+      },
+      {
+        "status": "Sanding & Polishing",
+        "date": "Scheduled 26 Oct 2026",
+        "completed": false,
+        "note": "Bevel edge hand buffing"
+      },
+      {
+        "status": "Dispatched",
+        "date": "Scheduled 27 Oct 2026",
+        "completed": false,
+        "note": "Courier dispatch"
+      },
+      {
+        "status": "Delivered",
+        "date": "Estimated 29 Oct 2026",
+        "completed": false,
+        "note": "Safe doorstep delivery"
+      }
+    ],
+    "trackingNumber": "EXP-BLR-11029",
+    "placedAt": "2026-10-22T08:30:00.000Z"
+  }
+]

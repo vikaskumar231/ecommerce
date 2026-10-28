@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="paperBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#faf5ee"/>
+      <stop offset="100%" stop-color="#ebe1d1"/>
+    </linearGradient>
+    <linearGradient id="glassResin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#e0f2fe" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.75"/>
+    </linearGradient>
+    <linearGradient id="goldShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="50%" stop-color="#eab308"/>
+      <stop offset="100%" stop-color="#92400e"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="8" dy="16" stdDeviation="14" flood-color="#78350f" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="600" fill="url(#paperBg)"/>
+
+  <!-- Left Bookmark (Botanical Pressed Fern & Flowers) -->
+  <g filter="url(#cardShadow)">
+    <rect x="160" y="80" width="110" height="380" rx="14" fill="url(#glassResin)" stroke="#ffffff" stroke-width="2"/>
+    <!-- Top Eyelet Hole -->
+    <circle cx="215" cy="115" r="9" fill="#faf5ee" stroke="url(#goldShine)" stroke-width="3"/>
+    <!-- Silky Gold Tassel -->
+    <path d="M215 115 C215 50, 200 40, 190 25" fill="none" stroke="url(#goldShine)" stroke-width="3"/>
+    <path d="M190 25 L165 5 Q190 30, 215 5 Z" fill="url(#goldShine)"/>
+    <!-- Real Pressed Botanicals inside -->
+    <path d="M215 420 Q205 320, 215 220" stroke="#15803d" stroke-width="2.5" fill="none"/>
+    <!-- Fern leaves -->
+    <ellipse cx="202" cy="380" rx="14" ry="4" transform="rotate(-30 202 380)" fill="#16a34a"/>
+    <ellipse cx="228" cy="360" rx="14" ry="4" transform="rotate(30 228 360)" fill="#16a34a"/>
+    <ellipse cx="202" cy="320" rx="14" ry="4" transform="rotate(-30 202 320)" fill="#16a34a"/>
+    <ellipse cx="228" cy="300" rx="14" ry="4" transform="rotate(30 228 300)" fill="#16a34a"/>
+    <!-- Pressed Yellow Daisy Bloom -->
+    <circle cx="215" cy="220" r="7" fill="#f59e0b"/>
+    <circle cx="215" cy="205" r="5" fill="#fef08a"/>
+    <circle cx="215" cy="235" r="5" fill="#fef08a"/>
+    <circle cx="200" cy="220" r="5" fill="#fef08a"/>
+    <circle cx="230" cy="220" r="5" fill="#fef08a"/>
+    <!-- Gold leaf flakes -->
+    <circle cx="195" cy="160" r="4" fill="url(#goldShine)"/>
+    <circle cx="235" cy="180" r="3" fill="url(#goldShine)"/>
+    <circle cx="225" cy="260" r="4.5" fill="url(#goldShine)"/>
+    <circle cx="190" cy="400" r="3.5" fill="url(#goldShine)"/>
+  </g>
+
+  <!-- Right Bookmark (Ocean Wave Surf with Real Sand) -->
+  <g filter="url(#cardShadow)">
+    <rect x="330" y="100" width="110" height="380" rx="14" fill="#0284c7" stroke="#ffffff" stroke-width="2"/>
+    <!-- Sand Base -->
+    <path d="M330 400 Q385 390, 440 410 L440 480 L330 480 Z" fill="#d97706" opacity="0.8"/>
+    <!-- Ocean Wave Foam Lines -->
+    <path d="M330 350 Q385 330, 440 360" stroke="#ffffff" stroke-width="6" fill="none" opacity="0.9"/>
+    <path d="M330 375 Q385 355, 440 385" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.8"/>
+    <!-- Top Eyelet Hole -->
+    <circle cx="385" cy="135" r="9" fill="#faf5ee" stroke="url(#goldShine)" stroke-width="3"/>
+    <!-- Silky Navy/Silver Tassel -->
+    <path d="M385 135 C385 70, 400 55, 410 40" fill="none" stroke="#0369a1" stroke-width="3"/>
+    <path d="M410 40 L435 15 Q410 45, 385 20 Z" fill="#0369a1"/>
+    <!-- Gold flaked top -->
+    <circle cx="360" cy="180" r="4" fill="url(#goldShine)"/>
+    <circle cx="410" cy="210" r="3" fill="url(#goldShine)"/>
+    <circle cx="370" cy="250" r="5" fill="url(#goldShine)"/>
+  </g>
+
+  <text x="300" y="535" font-family="'Playfair Display', Georgia, serif" font-size="22" font-weight="700" fill="#78350f" text-anchor="middle" letter-spacing="2">BOTANICAL RESIN BOOKMARKS</text>
+  <text x="300" y="560" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="600" fill="#d97706" text-anchor="middle" letter-spacing="3">PRESERVED FLOWERS • SILK TASSELS</text>
+</svg>
